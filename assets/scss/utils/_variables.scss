@@ -46,6 +46,16 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+
+// custom color
+$brown: #A38F85 !default; // heder、footer
+$dark-brown: #3B3835 !default; // 文字標題顏色
+$dark-pink: #C6AA9D !default; // 深粉紅
+$dark-green: #8C9086 !default; // 深綠色
+$beige: #BDAB9A !default; // 棕色
+$apricot: #ECE2DB !default; // 杏色
+$cool-brown: #8F8681 !default; // 冷棕色
+
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -550,7 +560,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                $font-size-base * .75 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
 $font-weight-lighter:         lighter !default;
@@ -567,7 +577,7 @@ $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 2.25 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
