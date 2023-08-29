@@ -1,3 +1,335 @@
-.index-title {
-  font-size: 100px;
+.index-section1 {
+  background-image: url("../images/1/section1-o-80.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: center;
+
+  .container {
+    padding-top: 282px;
+    padding-bottom: 282px;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+.index-section2 {
+  background-image: url("../images/1/section2-o-20.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  h2 {
+    margin-bottom: 200px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 120px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.index-section3 {
+  background-color: #ebe8df;
+
+  .container {
+    background-image: url("../images/1/lose_weight.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  h3 {
+    margin-bottom: 250px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 120px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.index-section4 {
+  .card {
+    border: 0;
+    margin-top: 50px;
+
+    .card-body {
+      margin-top: 50px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+
+      .card-body {
+        margin-top: 40px;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 50px;
+
+      .card-body {
+        margin-top: 50px;
+      }
+    }
+
+    .card-text {
+      height: 120px;
+
+      @include media-breakpoint-down(xxl) {
+        height: 150px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: 20px;
+      }
+
+      @include media-breakpoint-down(md) {
+        height: 90px;
+      }
+    }
+  }
+
+  .col {
+    position: relative;
+
+    .round {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      left: calc(50% - 50px);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      @include media-breakpoint-down(lg) {
+        width: 80px;
+        height: 80px;
+        left: calc(50% - 40px);
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 100px;
+        height: 100px;
+        left: calc(50% - 50px);
+      }
+    }
+
+    &:nth-child(1) .round {
+      background-color: #ccbab1;
+    }
+    &:nth-child(2) .round {
+      background-color: #979895;
+    }
+    &:nth-child(3) .round {
+      background-color: #bfb5ab;
+    }
+
+    @include media-breakpoint-down(md) {
+      &:not(:last-child) {
+        margin-bottom: 36px;
+      }
+    }
+  }
+}
+
+.index-section5 {
+  .index-pill-link {
+    color: #fff;
+    border: 1px solid #77786b;
+    font-size: 20px;
+    background-color: #a4a596;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    &.active {
+      background-color: #77786b;
+    }
+  }
+
+  .shampoo-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+
+      &:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+    }
+
+    .shampoo-card {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(md) {
+        width: 280px;
+        height: 280px;
+      }
+
+      .shampoo {
+        width: 80px;
+        height: 80px;
+
+        @include media-breakpoint-down(md) {
+          width: 120px;
+          height: 120px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 24px;
+
+        @include media-breakpoint-down(md) {
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  .shampoo-scalp-cards {
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+
+      &:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+    }
+
+    .col {
+      @include media-breakpoint-down(md) {
+        &:not(:last-child) {
+          margin-bottom: 36px;
+        }
+      }
+    }
+
+    .shampoo {
+      width: 145px;
+      margin-left: auto;
+    }
+  }
+
+  .bg-scalp {
+    .shampoo-card {
+      &:nth-child(1) {
+        background-color: #decfc0;
+      }
+      &:nth-child(2) {
+        background-color: #bf9d7b;
+      }
+      &:nth-child(3) {
+        background-color: #bea298;
+      }
+    }
+  }
+
+  .bg-need {
+    .shampoo-card {
+      &:nth-child(1) {
+        background-color: #bcbdaf;
+      }
+      &:nth-child(2) {
+        background-color: #ad8fcb;
+      }
+      &:nth-child(3) {
+        background-color: #dda09c;
+      }
+      &:nth-child(4) {
+        background-color: #ceeaff;
+      }
+      &:nth-child(5) {
+        background-color: #a4baf2;
+      }
+    }
+  }
+
+  .p-scalp {
+    padding-left: 15%;
+    padding-right: 15%;
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  .p-need {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .col {
+      @include media-breakpoint-down(xl) {
+        &:nth-child(1) {
+          margin-bottom: 36px;
+        }
+        &:nth-child(2) {
+          margin-bottom: 36px;
+        }
+        &:nth-child(3) {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
 }

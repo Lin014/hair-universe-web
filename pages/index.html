@@ -1,57 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>頭髮危機小宇宙</title>
+</head>
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
+<body>
+
+  <div class="index-section1 mb-100">
+    <div class="container">
+      <h1 class="fs-48 text-white text-end fw-bold">頭髮危機小宇宙</h1>
+    </div>
+  </div>
+
+  <div class="index-section2 container mb-100">
+    <h2 class="text-secondary fw-bold">你是否有掉髮的問題？</h2>
+    <div class="text-end">
+      <a href="hair_loss.html" class="btn btn-outline-secondary fs-5">瞭解更多</a>
+    </div>
+  </div>
+
+  <div class="index-section3 mb-100">
+    <div class="container pt-md-36 pb-md-36 pt-3 pb-3">
+      <h3 class="text-secondary fw-bold">減肥、吃生蛋、怕吃油<br>竟會導致脫髮！</h3>
+      <div class="text-end">
+        <h2 class="text-secondary fw-bold mb-3">你吃正確了嗎？</h2>
+        <a href="nutrition.html" class="btn btn-outline-secondary fs-5">瞭解更多</a>
       </div>
     </div>
+  </div>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+  <div class="index-section4 mb-100">
+    <div class="container text-center">
+      <h2 class="text-secondary fw-bold mb-36">3 招助頭髮健康生長</h2>
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col">
+          <div class="round fs-48 fw-bold d-flex justify-content-center align-items-center">1</div>
+          <div class="card bg-dark-pink p-4">
+            <div class="card-body">
+              <h3 class="card-title fw-bold mb-4">補充足夠營養</h5>
+                <ul class="card-text text-start mb-4">
+                  <li>鋅：保持皮膚穩定健康</li>
+                  <li>鐵：幫助製造強壯的頭髮</li>
+                  <li>其他營養素也有幫助</li>
+                </ul>
+                <img src="../assets/images/1/section3-1.jpg" class="card-img-bottom border border-3 border-white"
+                  alt="補充足夠營養">
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+        </div>
+        <div class="col">
+          <div class="round fs-48 fw-bold d-flex justify-content-center align-items-center">2</div>
+          <div class="card bg-dark-green p-4">
+            <div class="card-body">
+              <h3 class="card-title fw-bold mb-4">溫柔對待頭皮</h5>
+                <p class="card-text text-start mb-4">洗頭的時候記住不要對頭皮太粗魯、用力抓頭皮，要用指腹輕輕按摩。</p>
+                <img src="../assets/images/1/section3-2.jpg" class="card-img-bottom border border-3 border-white"
+                  alt="補充足夠營養">
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="round fs-48 fw-bold d-flex justify-content-center align-items-center">3</div>
+          <div class="card bg-beige p-4">
+            <div class="card-body">
+              <h3 class="card-title fw-bold mb-4">有症狀早就醫</h5>
+                <p class="card-text text-start mb-4">注意自己頭髮的生長狀況，如果發現原本生長很快的頭髮突然有點「變慢」或是發現自己掉髮變多，就要注意把握就醫時機。</p>
+                <img src="../assets/images/1/section3-3.jpg" class="card-img-bottom border border-3 border-white"
+                  alt="補充足夠營養">
+            </div>
           </div>
         </div>
       </div>
+
     </div>
+  </div>
 
-    <%- include('./layout/footer'); -%>
+  <div class="index-section5 container mb-100 text-center">
+    <h2 class="text-secondary fw-bold mb-36">洗髮精選擇</h2>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+    <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="index-pill-link active" id="pills-scalp-tab" data-bs-toggle="pill" data-bs-target="#pills-scalp"
+          type="button" role="tab" aria-controls="pills-scalp" aria-selected="true">頭皮狀況</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="index-pill-link" id="pills-need-tab" data-bs-toggle="pill" data-bs-target="#pills-need"
+          type="button" role="tab" aria-controls="pills-need" aria-selected="false">頭髮需求</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active bg-apricot py-64" id="pills-scalp" role="tabpanel"
+        aria-labelledby="pills-scalp-tab">
+        <div class="shampoo-cards bg-scalp">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">油性頭皮</h3>
+            <span class="d-block">Oily Scalp</span>
+            </div>            
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">中性頭皮</h3>
+              <span class="d-block ">Normal Scalp</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">乾性頭皮</h3>
+              <span class="d-block ">Dry Scalp</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade bg-apricot py-64" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
+        <div class="shampoo-cards bg-need">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start mb-xl-0 mb-4">
+            <div>
+              <h3 class="mb-1">控油清爽</h3>
+              <span class="d-block">Oil-control<br>& Fresh</span>
+            </div>
+            <div class="text-end align-items-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">抗屑止癢</h3>
+              <span class="d-block">Anti-dandruff<br>& Anti-itching</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">染燙修護</h3>
+              <span class="d-block">Dyeing<br>& Scalding</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">保濕柔順</h3>
+              <span class="d-block">Moisturizing<br>& Smoothing</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+            <div>
+              <h3 class="mb-1">強健豐盈</h3>
+              <span class="d-block">Strength<br>& abundance</span>
+            </div>
+            <div class="text-end">
+              <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
