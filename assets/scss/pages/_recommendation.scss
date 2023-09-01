@@ -1,0 +1,48 @@
+.recommendation-section1 {
+  width: 20%;
+
+  @include media-breakpoint-down(lg) {
+    width: 35%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  .form-check-input {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+  }
+
+  .form-check-label {
+    cursor: pointer;
+  }
+
+}
+
+.recommendation-section2 {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(lg) {
+      width: 65%;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+
+    .btn-primary {
+      color: white !important;
+    }
+
+    .card-title {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+}

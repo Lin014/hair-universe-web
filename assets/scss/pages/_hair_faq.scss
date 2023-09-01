@@ -1,0 +1,36 @@
+.hairfaq-section1 {
+  .hair-faq-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hair-faq-card {
+    display: block;
+    text-decoration: none;
+    width: calc(50% - 12px);
+
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid #a38f85;
+
+    li {
+      list-style-type: disc;
+    }
+    img {
+      width: 40%;
+    }
+
+    span {
+      color: #888;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+}
