@@ -1,4 +1,53 @@
-.footer{
+.footer {
   background: #69F0AE;
   font-size: 64px;
+}
+
+footer {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.custom-icon {
+  width: 48px;
+  height: 48px;
+  margin-top: $spacer*1.5;
+  margin-bottom: $spacer*1.5;
+}
+
+@media (max-width: 768px) {
+  .custom-icon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: $spacer*1.5;
+  }
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--bs-white)
+}
+
+button {
+  background-color: #A4A596;
+  color: white;
+}
+
+.custom-btn {
+  background-color: #A4A596;
+  color: white;
+  border: 0;
+}
+
+.custom-btn:hover {
+  background-color: #4e4e47;
+  border-color: #A4A596;
+}
+
+.custom-input {
+  width: 200px;
 }
