@@ -46,3 +46,13 @@
       justify-content: center;
     }
 }
+
+.recommendation-btn {
+  border: 1px solid $primary !important;
+  color: $primary !important;
+
+  &:hover {
+    color: white !important;
+    background-color: $primary !important;
+  }
+}
