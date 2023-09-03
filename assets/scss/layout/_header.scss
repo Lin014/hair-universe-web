@@ -1,4 +1,26 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+nav {
+  line-height: 1.5;
+  color: white;
+  font-family: 'Noto Sans TC', sans-serif;
+
+}
+
+li a:hover {
+  color: $dark-brown;
+}
+
+.header {
+  background: $brown;
+  height: 96px;
+  font-size: $h3-font-size;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 35px;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
 }
