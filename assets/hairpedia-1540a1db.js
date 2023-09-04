@@ -1,0 +1,1 @@
+import"./main-e89bc9dd.js";import{$ as a}from"./jquery-658ee387.js";a("#scalp-class-link1").on("mouseover",()=>{a("#hairpediaAnimation1").css("transform","translateX(250px)")});a("#scalp-class-link1").on("mouseout",()=>{a("#hairpediaAnimation1").css("transform","translateX(0)")});

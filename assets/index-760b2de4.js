@@ -1,1 +1,0 @@
-import"./main-4c8cf3de.js";const a=document.querySelectorAll(".shampoo-card");a.forEach(t=>{t.addEventListener("click",function(e){e.preventDefault();const o=this.getAttribute("data-param"),n=`recommendation.html?param=${encodeURIComponent(o)}`;console.log(o),window.location.href=n})});
