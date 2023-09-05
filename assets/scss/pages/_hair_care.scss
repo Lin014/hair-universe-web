@@ -7,7 +7,7 @@
     }
 }
 
-.hairpedia-section1 {
+.haircare-section1 {
     background-image: url('../images/2/background-starsky 1.png');
     background-size: cover;
 
@@ -23,20 +23,20 @@
         width: 15%;
     }
 
-    .hairpedia-image {
+    .haircare-image {
         max-height: 100%;
         max-width: 100%;
         height: auto;
     }
 
-    .hairpedia-image2 {
+    .haircare-image2 {
         max-height: 40%;
         max-width: 40%;
         height: auto;
     }
 }
 
-.hairpedia-animation {
+.haircare-animation {
     position: absolute;
     z-index: 2;
     transition: transform 1s;
@@ -46,27 +46,22 @@
     }
 }
 
-.hairpedia-animation-1 {
+.haircare-animation-1 {
     top: 242px;
     left: 250px;   
 }
 
-.hairpedia-animation-2 {
+.haircare-animation-2 {
     top: 690px;
     left: 620px;   
 }
 
-.hairpedia-animation-3 {
-    top: 1350px;
-    left: 1050px;   
-}
-
-.hairpedia-animation-float {
+.haircare-animation-float {
     width: 40%;
     animation: floatAnimation 2s ease-in-out infinite;
 }
 
-.hairpedia-block {
+.haircare-block {
     height: 56px;
     background-image: url('../images/2/Rectangle 182.png');
 
