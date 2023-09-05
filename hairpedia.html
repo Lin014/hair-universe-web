@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>頭髮危機小宇宙</title>
-  <script type="module" crossorigin src="/hair-universe-web/assets/hairpedia-1540a1db.js"></script>
-  <link rel="modulepreload" crossorigin href="/hair-universe-web/assets/main-e89bc9dd.js">
-  <link rel="modulepreload" crossorigin href="/hair-universe-web/assets/jquery-658ee387.js">
-  <link rel="stylesheet" href="/hair-universe-web/assets/main-4738dda6.css">
+  <script type="module" crossorigin src="/hair-universe-web/assets/hairpedia-d3f613e3.js"></script>
+  <link rel="modulepreload" crossorigin href="/hair-universe-web/assets/main-66a2b781.js">
+  <link rel="modulepreload" crossorigin href="/hair-universe-web/assets/jquery-f78b755a.js">
+  <link rel="stylesheet" href="/hair-universe-web/assets/main-5298318f.css">
 </head>
 
 <body>
@@ -130,44 +130,67 @@
             </div>
 
             <div id="hairpediaAnimation1" class="hairpedia-animation hairpedia-animation-1">
-                <img src="/hair-universe-web/assets/section1-1-b16acf75.png" alt="太空人坐火箭" class="hairpedia-image">
+                <img src="/hair-universe-web/assets/section1-1-b16acf75.png" alt="太空人坐火箭出發前往頭皮種類" class="hairpedia-image">
+            </div>
+
+            <div id="hairpediaAnimation2" class="hairpedia-animation hairpedia-animation-2">
+                <img src="/hair-universe-web/assets/section1-5-3d52bae5.png" alt="太空人坐火箭出發前往毛髮結構" class="hairpedia-image">
+            </div>
+
+            <div id="hairpediaAnimation3" class="hairpedia-animation hairpedia-animation-3">
+                <img src="/hair-universe-web/assets/startup 1-88968de2.png" alt="火箭出發前往生長週期" class="hairpedia-image">
             </div>
 
             <div class="container hairpedia-content d-flex flex-column">
 
                 <div class="d-flex align-self-start w-100 justify-content-between">
-                    <a id="scalp-class-link1" href="#" class="d-block text-center w-50">
-                        <img src="/hair-universe-web/assets/Group 337-483ed889.png" alt="頭皮種類" class="hairpedia-image mb-3">
-                        <h2 class="text-white mb-0">頭皮種類</h2>
-                    </a>
+                    <div class="w-50 text-center">
+                        <a id="scalp-class-link1" href="#" class="text-center">
+                            <img src="/hair-universe-web/assets/Group 337-483ed889.png" alt="頭皮種類" class="hairpedia-image mb-3">
+                            <br>
+                            <h2 class="d-inline text-white mb-0">頭皮種類</h2>
+                        </a>
+                    </div>                    
 
-                    <div id="hairpediaAnimation2" class="hairpedia-animation-2 text-end">
+                    <div class="hairpedia-animation-float text-end">
                         <img src="/hair-universe-web/assets/section1-6-ba3eecd3.png" alt="太空人&星球" class="hairpedia-image">
                     </div>
                 </div>
 
                 <img src="data:image/png;base64,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" alt="線段" class="hairpedia-image line align-self-center mb-2">
 
-                <a id="scalp-class-link2" href="#" class="d-block text-center align-self-end w-50">
-                    <img src="/hair-universe-web/assets/Group 338-3d48aaf4.png" alt="毛髮結構" class="hairpedia-image mb-3">
-                    <h2 class="text-white mb-0">毛髮結構</h2>
-                </a>
+                <div class="w-50 text-center align-self-end">
+                    <a id="scalp-class-link2" href="#" class="text-center">
+                        <img src="/hair-universe-web/assets/Group 338-3d48aaf4.png" alt="毛髮結構" class="hairpedia-image mb-3">
+                        <br>
+                        <h2 class="d-inline text-white mb-0">毛髮結構</h2>
+                    </a>
+                </div>
+                
 
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAADFCAYAAAD68QZDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAj3SURBVHgB7d19zNZVHcfx75UgDMNnsdR8yGezuRpzFEstSpprGmUOa8uiSBZbTpdbtZxarZautoy1mrFmmWZtPjCrDdPKFJulslCXC4VMSY0xSESeP30O57IJ3IPrd/AW7nPer+2ziz/umz/g+931O+d3HiIADKQXQKMkvcEfY5yNvV5vQwDYmpvkcOcrzgPOP51FznXOcQEgc0N8wHnS2azt/cs5I4CWuQl6znRnhXbsCWdCAC3qN8os50XtXPrGmRlAa1z4o/rjk7Ua3Nyh/q5RAVTKRT/OH99yZjt7dfjVIX+WZkGV3CgH+uMHzgXR/RXJIwG0wI3yFudPKrPcOTKA2rnQJypPAZe6JIDaudAvcF5Wua86rGpBvZSnhr+moV80DmKTMyuAmrnIRzu/ULn1zvkB1MxFvp/KB/LJKuesAGqmvBjyUZVLkwBvD6BmLvLTnKUqd7dzUAA1c5Gf76xWmTQBcL2zdwC1Up7x+rSzTmXSQP4a5Q1fQJ1Uthjy1VY6M50u68OAkcUFPta51tmoMk877wugZspTwzeo/GXjQufkAGrmIj/S+d0uNEr63cMCqJmL/HjnMZX7ofISfaBeLvJxzu9VZoNztcM+LdRPea98yaNX2l8/W6waRguU36Xcoe7SO5SzY5jxggZ7klSP+0c3q52ze73e/BhmPNthT7LZebbDzz/nnONGYc882uPHqfP6A/Wdedw5KoBWKS9tmbODJkmD/9ucfQNonfISl29q+xMkn3E+q90048U0G/ZI/YY4wpnsHOAsce73+OTFAAAAAAAAADDMmDrGsFBeJp/qK90ErKgAzYLXlJvkGH/McM50xjtLnRud2900mwLAlka5SPmq7G33o6SDt290xgTQOjfChc5L2vGarisDaJmbYJJ2fmV28oIzPoAWufiP7i9wHER6HJscIxQ7JVHMhX+oP9IOxcMH/JVUbyytR1vS45TzsLpJe+WPC6AVLvi9nDvVXbp4iKcZtMMF/311lw71nhRAK1zwl6m7NG18cQCtcMF/SnlGq2ujpOsiWC2CNrjYP6HBTl3Z1ndoFDRD+aXjC+punjiFBa1wsR/rLFF3C5yDA2iB8vXZXd+lJIuVVx8D9XOxH+rcp+6ed04PoAUu9kOce9RdapRzA2iBi/0gZ766S6dHpnOKmflC/Vzo+6tsGUta8zUrgBa42A90blJ3W146BtAKF/zPVXY9Xbp6m8WRaIOL/SqVSauIxwbQAhf7pYXfKH8RW4TRChf7jMJGWegcEEALdqFRHhXLWNAK5duzShplkfK+e6B+LvbZhY2S1oh1vXYbGJlc7JcXNsoS54gAaqd8wMScwkZJ+1hOCaB2LvSe8yWV7XL8rzMtgBa42N/rrFF36dzitOeehZGoX/9b5S51t1p5aplGQRtc7Pv2H6W6NgrfKGiL8iauLoP61FifpFHQHBf9aGflgI2yzPkYjYJmufh/NECjPOtMDKBlboIJ2vFRRulau3cEgC0Nc6rycpVXv2tJY5kHnZMCA+H5tBHKm7TSEUXvjPz//pCzoNfrbQwAAAAAAAAAAABgGPFScg/SX8R4nHOOc4Kz2vmjc7dfHq4LAFsaZYzy9t/l2npZfbod+F7ntABa50YY118dvKNrsx9z3hxAq9wABzu3aLBNWlcE0CLlexv/oMGlOx5HBdAS5S2/96qbdM7wmMBuwSU0u4Hywdo3O++JbpY5GwK7Bc3yOus/Rv3EmRLdzfcU8uYAaqd8gMQdKvMPZ78Aape+UZzbVGapc2oAtVM+mPtXKpMG9YcHUDsX+ljnVpV5RFwehBa40Pd3FqjMQ+I6OrRA+c38n1Xmb86EAGrnQj/WeVxlUqO8KYDaudBPcf6tMqnBDgmgdi70Sc5TKpPeo5wQQO1c6Oc6z6vMk+LeRtRO+XatdK9810uDXrHQOT6AmrnI93G+7qxVmb86hwVQM+W9KPNULjUKb+ZRNxf5icpTvKXSpahMD6NuLvKpyjdllZorVg+jZsoD+c+rfCCf9thf4+wdQM1c5J/R1jdndXWtw2Y71M1F/jl1uyJ722+UL4pbgFEz5anh76q8UVY47w+gZi7yA537VW6x2N2I2rnI93buUbm0NJ/TI1E/F/rFKn/0usnZJ4DaKU8Rlzx+bXS+LGa80ArlQ7qXqZs1zvQAWqI8XlnaoVFWOx8KoEUa/HyvtOxlmniHgla5+M9w1u+kURY5JwbQOjfCJc66IZokXTiUDszjPC8gUZ4Vm+z8uP8t8oTzG2e6WAzZJJ61d6I/Hhkd+d9qfa/XUwAAAAAAAAAAAAAAAADAnq2atWH9NVx7OZtYv4XhMOKbxU0y3h/TnPOcI5xVzl3OXDfNigDw/2vp0rFDQ53Ekq6dmxJAy9wE+zpXOau0Y087RwXQIhf/W50HNLgrA2iNC/8kdb8NOF0cxFle2GUjpohc8GdFHrgfE92MDXaE4jWwxzdL+lZwLvMf50We7erq787mAGrWH8hfp/Jzh192zgygZsrHqN6qcqnBfsZ4BVVzgZ/sPKxy6Tq7q8WRRaiZC3yK8x+VW6I8GQDUSflQu5nOWpX7tXNQALVSnvH6hsoH8skNzugAapUK3Ll+FxolXSKUxicM5FEvF/hY55cqt9KZFkDNlKeG71S5dFA3twGjbi7y8c7tKpeajGlh1M1FfqRzn8rHKHOccQHUTPll42KVSRcLXeGMCqBmLvKJzjMqs9z5eAC1c6G/S92vy35FarB3B1A7F/pU5zmVSVdsvy2A2rnQL1J+F1IiHThxfAC1c6F/QXk/SYn5TtcdkcDIorzO61INfS32IG5xDgigdi70DyvvJymRrs4eH0DtlI8pKh2jzBVv5dEKF/tPVeZ7YtUwWuFiH+OsUDdpycu3aRQ0xQU/Qd3We21yLlc+/R5oh4v+jc6aARtlvTMjgFa5AX47QKO85HwwgJYpL5Zcs5NvlKkBYEvDfFRDD/TT8UYfCWCEGpbBtZviaH9c6Jwe+TzlB52be73eUwFge8pngTHbBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4XfwP6OIVaWsZpzkAAAAASUVORK5CYII=" alt="線段" class="hairpedia-image line align-self-center mb-2">
 
-                <div class="d-flex align-self-start w-100 justify-content-between">
-                    <a href="#" class="d-block text-center align-self-start w-50">
-                        <img src="/hair-universe-web/assets/Group 339-3b820f18.png" alt="生長週期" class="hairpedia-image mb-3">
-                        <h2 class="text-white mb-0">生長週期</h2>
-                    </a>
+                <div class="d-flex align-self-start w-100 justify-content-between mb-64">
+                    <div class="w-50 text-center">
+                        <a id="scalp-class-link3" href="#" class="text-center">
+                            <img src="/hair-universe-web/assets/Group 339-3b820f18.png" alt="生長週期" class="hairpedia-image mb-3">
+                            <br>
+                            <h2 class="d-inline text-white mb-0">生長週期</h2>
+                        </a>
+                    </div>
+                    
 
-                    <div id="hairpediaAnimation2" class="hairpedia-animation-2 text-end align-self-end">
+                    <div class="hairpedia-animation-float text-end align-self-end">
                         <img src="/hair-universe-web/assets/section1-3-0d70a0a0.png" alt="太空人讀書" class="hairpedia-image">
                     </div>
                 </div>
+
+                <div class="align-self-center w-100 text-center">
+                    <img src="/hair-universe-web/assets/section1-2-87413888.png" alt="太空人站在星球上" class="hairpedia-image2">
+                </div>
             </div>
 
-            <div class="hairpedia-block mt-100"></div>
+            <div class="hairpedia-block mt-5"></div>
 
 
         </div>
