@@ -1,0 +1,117 @@
+.hairstructure-section1 {
+  background-image: url("../images/2-2/section1.png");
+  background-size: cover;
+  background-position: center;
+
+  .hairstructure-content {
+    padding-top: 180px;
+    padding-bottom: 340px;
+
+    @include media-breakpoint-down(md) {
+      padding-top: 36px;
+      padding-bottom: 230px;
+    }
+  }
+}
+
+.hairstructure-section2 {
+  .img-card {
+    img {
+      border-radius: 20px;
+      border: 1px solid #3b3835;
+    }
+  }
+
+  .structure-card {
+    width: calc(33% - 64px);
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+
+    p {
+      text-indent: 4ch;
+    }
+  }
+}
+
+.hairstructure-section3 {
+  background-color: #e4e1da;
+
+  .hairstructure-round {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-color: #a4a596;
+
+    @include media-breakpoint-down(lg) {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+
+      span {
+        font-size: 16px !important;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+      height: 150px;
+      border-radius: 150px;
+
+      span {
+        font-size: 28px !important;
+      }
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hairstructure-section4 {
+  .section4-card {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-01 {
+    background-image: url("../images/2-2/section4-1.png");
+  }
+
+  .bg-02 {
+    background-image: url("../images/2-2/section4-2.png");
+  }
+
+  .bg-03 {
+    background-image: url("../images/2-2/section4-3.png");
+  }
+
+  .bg-04 {
+    background-image: url("../images/2-2/section4-4.png");
+  }
+
+  .bg-05 {
+    background-image: url("../images/2-2/section4-5.png");
+  }
+}
+
+.hairstructure-section5 {
+  .content-width {
+    & div:nth-child(1) {
+      width: 30%;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+    & div:nth-child(2) {
+      width: 50%;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  }
+}

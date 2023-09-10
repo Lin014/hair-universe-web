@@ -386,18 +386,18 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
+  1: $spacer * .25, // spacer = 16px
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
-  40:40px,
-  32:32px,
-  36: 36px,
-  // new add
-  64: 64px,
-  // new add
-  100: 100px) !default;
+  40: 40px,
+  32: 32px,
+  36: 36px, // new add
+  64: 64px, // new add
+  96: 96px,
+  100: 100px
+) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position

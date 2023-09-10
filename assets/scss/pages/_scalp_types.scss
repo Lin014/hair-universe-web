@@ -1,0 +1,63 @@
+.scalptypes-section1 {
+  background-image: url("../images/2-1/section2-background.png");
+  background-size: cover;
+  background-position: center;
+
+  .scalptypes-card {
+    width: 80%;
+    background-color: #fcf2eb;
+    border: 1px solid #c8a797;
+
+    @include media-breakpoint-down(lg) {
+      width: 95%;
+    }
+
+    .scalptypes-title {
+      background-color: #c8a797;
+      color: white;
+      font-size: 20px;
+    }
+
+    .scalptypes-content {
+      width: 80%;
+    }
+
+    .bg-light-green {
+      background-color: #ddddce;
+    }
+
+    .form-check-input {
+      cursor: pointer;
+    }
+
+    .form-check-label {
+      cursor: pointer;
+    }
+
+    .color-green {
+      color: #6d7d55;
+    }
+  }
+}
+
+.scalptypes-section2 {
+  .scalptypes-card2 {
+    width: calc(33% - 16px);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+
+    .title-block {
+      display: inline-block;
+      background-color: #fff5f0 !important;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .fs-12 {
+      font-size: 12px;
+    }
+  }
+}
