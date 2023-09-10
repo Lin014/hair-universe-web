@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頭髮危機小宇宙</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <%- include('./layout/header'); -%>
+
+        <div class="container">
+            <div class="font-size-base mt-3 mb-4">
+                <nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item active text-secondary" aria-current="page">頭髮保養診所</li>
+                    </ol>
+                </nav>
+            </div>
+            <h1 class="text-left">選擇篩選條件，馬上尋找適合您的診所！</h1>
+            <div class="d-flex">
+                <div>
+                    <h4>地區</h4>
+                    <div class="item">
+                        <select id="Region" class="select">
+                            <option disabled selected value="Region">選取所在地區</option>
+                            <option class="item" value="taipei">台北市</option>
+                            <option class="item" value="newtaipei">新北市</option>
+                            <option class="item" value="taoyuan">桃園市</option>
+                            <option class="item" value="hsinchu">新竹市</option>
+                            <option class="item" value="taichung">台中市</option>
+                            <option class="item" value="tainan">台南市</option>
+                            <option class="item" value="kaohsiung">高雄市</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="ms-4">
+                    <h4>診所類型</h4>
+                    <select id="ClinicType" class="select">
+                        <option disabled selected value="Clinic">選取適合的診所類型</option>
+                        <option class="item" value="taipei">植髮診所</option>
+                        <option class="item" value="newtaipei">美學診所</option>
+                        <option class="item" value="taoyuan">頭髮護理診所</option>
+                    </select>
+                </div>
+            </div>
+            <div id="map" class="map mt-36 mb-100"></div>
+        </div>
+        <%- include('./layout/footer'); -%>
+            <script type="module" src="../main.js"></script>
+
+            <script>
+                let map;
+                let currentPosition;
+                let markers = {};
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: { lat: 23.553118, lng: 121.0211024 },
+                        zoom: 8,
+                    });
+
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        currentPosition = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                        };
+                        map.setCenter(currentPosition);
+                        map.setZoom(16);
+                        const autocomplete = new google.maps.places.Autocomplete(
+                            document.getElementById('Region'), {
+                            types: ['geocode'],
+                            componentRestrictions: { country: 'TW' },
+
+                        });
+                    });
+                }
+
+                const regionSelect = document.getElementById('Region');
+                const clinicTypeSelect = document.getElementById('ClinicType');
+                regionSelect.addEventListener('change', performSearch);
+                clinicTypeSelect.addEventListener('change', performSearch);
+                performSearch();
+
+                function performSearch() {
+                    const selectedRegion = regionSelect.value;
+                    const selectedClinicType = clinicTypeSelect.value;
+                    searchOnMap(selectedRegion, selectedClinicType);
+                }
+                function searchOnMap(region, clinicType) {
+                    const map = new google.maps.Map(document.getElementById('map'), {
+                        center: { lat: 23.553118, lng: 121.0211024 },
+                        zoom: 8,
+                    });
+
+                    const clinics = [
+                        { name: 'DCDC', location: { lat: 24.8202131, lng: 121.0245482 }, region: 'region1', type: 'clinicType1' },
+                        { name: 'i hair 風華御髮', location: { lat: 24.789, lng: 46.789 }, region: 'region2', type: 'clinicType2' },
+                    ];
+
+                    const matchingClinics = clinics.filter(clinic => clinic.region === region && clinic.type === clinicType);
+                    matchingClinics.forEach(clinic => {
+                        const marker = new google.maps.Marker({
+                            position: clinic.location,
+                            map: map,
+                            title: clinic.name,
+                        });
+                    });
+                }
+
+
+            </script>
+            <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxZtWhhKYtMFtj6eM9ek-c6Qtpkht5yA&libraries=places&callback=initMap">
+                </script>
+</body>
+
+</html>
