@@ -1,0 +1,45 @@
+li {
+    margin: 0;
+    padding-bottom: 0px;
+    list-style: none; /* Rem                                                                                                                                                                                                                                                                                                                                                                                                                   ove default bullet points */
+    background-color: #ECE2DB;
+    .p-text
+     {
+          word-break:normal;
+          word-wrap:break-word;
+     }
+  }
+  
+  .dandruff-section1 {
+      background-image: url("../images/3-2/section3-2-0.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    
+      padding-top: 100px;
+      padding-bottom: 400px;
+    
+  }
+  
+  
+  .dandruff-section2 {
+  
+      .title-block {
+        background-color: #decfc0;
+        border-radius: 10px;
+      }
+    
+      .image {
+       
+        border-radius: 20px;
+        padding-right: 36px;
+        padding-left: 100px;
+  
+    
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+      
+    }
+  

@@ -1,0 +1,80 @@
+
+    .hair-lifecycle-section1 {
+      background-image: url("../images/2-3/section2-3-0.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+       
+        padding-top: 100px;
+        padding-bottom: 30%;
+      
+        @include media-breakpoint-down(lg) {
+          padding-top: 100px;
+          padding-bottom: 25%;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-top: 100px;
+            padding-bottom: 200px;
+          }
+    
+        @include media-breakpoint-down(sm) {
+          padding-top: 100px;
+          padding-bottom: 150px;
+        }
+        h2
+        {
+            margin-top: 300px;
+
+        }
+  }
+  
+  
+  .hair-lifecycle-section2 {
+  
+      .title-block {
+        background-color: #decfc0;
+        border-radius: 10px;
+      }
+      h3
+      {
+        padding-left: 3%;
+        padding-right: 3%;
+        
+      }
+      p{
+        padding-left: 3%;
+        padding-right: 3%;
+        word-break: break-all
+      }
+    }
+
+    .hair-lifecycle-section3 {
+        
+        img
+        {
+            border-radius: 50%;
+        }
+        .card
+        {
+            background-color: #FFFFFF;
+            border-width: 0px;
+        }
+        
+        h5
+        {
+            margin-top: 300px;
+        }
+
+        .title-block {
+            background-color: #8C9086;
+            border-radius: 10px;
+        }
+
+        .context
+        {
+            background-color: #FFF5F0;
+            border-radius: 10px;
+        }
+      }
+  

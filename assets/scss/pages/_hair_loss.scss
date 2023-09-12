@@ -1,0 +1,76 @@
+
+.hair-loss-section1 {
+  background-color: #ebe8df;
+  
+  .container {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  h2 {
+    margin-bottom: 250px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 120px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      margin-bottom: 100px;
+    }
+  }
+
+  .image {
+      border-radius: 20px;
+
+      @include media-breakpoint-down(md) {
+          padding-left: 100px;
+      }
+  
+      
+      @include media-breakpoint-down(lg) {
+          padding-left: 50px;
+          
+        }
+  }
+}
+
+
+.hair-loss-section2 {
+  .image {
+    border-radius: 50%;
+
+    @include media-breakpoint-down(md) {
+        padding-left: 50px;
+    }
+
+    
+    @include media-breakpoint-down(lg) {
+        padding-left: 25px;
+        
+      }
+}
+}
+
+.hair-loss-section3 {
+      
+
+}
+
+.hair-loss-section4
+{
+  .image
+  {
+    border-radius: 20%;
+  }
+
+  
+
+  .block
+  {
+      background-color:#FCF2EB ;
+      margin: auto;
+  }
+
+}

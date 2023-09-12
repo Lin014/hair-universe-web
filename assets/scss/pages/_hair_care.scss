@@ -1,0 +1,30 @@
+.haircare-section1 {
+    background-image: url("../images/4-2/section4-2-0.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    padding-top: 100px;
+    padding-bottom: 400px;
+  
+}
+
+.haircare-section2 {
+
+    .title-block {
+      background-color: #decfc0;
+      border-radius: 10px;
+    }
+  
+    .image {
+     
+      border-radius: 20px;
+      padding-right: 36px;
+      padding-left: 100px;
+
+  
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+  }
