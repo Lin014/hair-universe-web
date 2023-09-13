@@ -5,6 +5,7 @@
 .img {
     max-width: 100%;
     width: 25%;
+    height: auto;
     display: block;
     -moz-border-radius-bottomright: 50px 50px;
     border-bottom-right-radius: 50px 50px;
@@ -21,10 +22,7 @@
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+
 
 .custom-content {
     margin-left: $spacer *3.5;
