@@ -1,11 +1,13 @@
-footer {
-  font-family: 'Noto Sans TC', sans-serif;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 .custom-icon {
   width: 48px;
   height: 48px;
-  margin-top: $spacer*1.5;
+  margin-top: 24px;
   margin-bottom: $spacer*1.5;
 }
 
@@ -13,19 +15,27 @@ footer {
   .custom-icon {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
     margin-bottom: $spacer*1.5;
   }
 }
 
-ul li {
-  list-style-type: none;
+@media (max-width: 576px) {
+  .custom-icon {
+    margin-top: 0px;
+  }
 }
 
-ul li a {
-  text-decoration: none;
-  color: var(--bs-white)
+.footer-style {
+  ul li {
+    list-style-type: none;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: var(--bs-white)
+  }
 }
+
 
 button {
   background-color: #A4A596;
@@ -45,4 +55,4 @@ button {
 
 .custom-input {
   width: 200px;
-} 
+}

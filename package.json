@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "default-passive-events": "^2.0.0",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
     "jquery": "^3.7.1",
