@@ -1,6 +1,12 @@
 .header-nav, .nav2 {
+  li {
+    list-style: none;
+  }
   a {
     border-radius: 5px;
+    color: white;
+    text-decoration: none;
+
     &:hover {
       opacity: 0.8;
       color: white;

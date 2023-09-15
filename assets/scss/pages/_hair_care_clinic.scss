@@ -1,23 +1,26 @@
-.map {
-    max-width: 100%;
-    width: 1000px;
-    height: 750px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 767px) {
+.hair-care-clinic {
     .map {
-        width: 400px;
-        height: 275px;
+        max-width: 100%;
+        width: 1000px;
+        height: 750px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    h1 {
-        font-size: 20px !important;
-    }
-
-    h4 {
-        font-size: 16px !important;
+    
+    
+    @media (max-width: 767px) {
+        .map {
+            width: 400px;
+            height: 275px;
+        }
+    
+        h1 {
+            font-size: 20px !important;
+        }
+    
+        h4 {
+            font-size: 16px !important;
+        }
     }
 }
 
