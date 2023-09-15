@@ -25,7 +25,7 @@ export const shampooList = [
     {
         id: 1,
         name: '淨平衡洋甘菊<br>控油洗髮精',
-        brand: '艾瑪絲',
+        brand: '森歐黎漾',
         scalpType: '油性',
         scalpColor: '#DECFC0',
         needType: '控油清爽',
