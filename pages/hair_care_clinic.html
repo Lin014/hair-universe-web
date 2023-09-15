@@ -23,6 +23,7 @@
                 </nav>
             </div>
             <h1 class="text-left">選擇篩選條件，馬上尋找適合您的診所！</h1>
+
             <div class="d-flex">
                 <div>
                     <h4>地區</h4>
@@ -48,7 +49,10 @@
                     </select>
                 </div>
             </div>
-            <div id="map" class="map mt-36 mb-100"></div>
+            <div>
+                <h5 class="text-center mt-3 mb-3">請先選取地區及診所類型，完成篩選後請點擊地圖上紅色標記查看診所資訊</h5>
+            </div>
+            <div id="map" class="map mt-2 mb-100"></div>
         </div>
         <div class="dialog_modal">
             <div class="dialog">
@@ -126,7 +130,6 @@
                         zoom: 16,
                     });
                     const infoWindow = new google.maps.InfoWindow();
-
                     setMarkers(beaches);
                 }
 
@@ -159,15 +162,12 @@
                                 <h5>診所電話: ${clinicPhone}</h5>
                                 <h5>營業時間: ${clinicTime}</h5>
                                 <h5>診所地址: ${clinicAddress}</h5>
-                                
                                 <h5>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></h5>
                                 
                             </div>
                         `;
-
                         infoWindow.setContent(contentString);
                         infoWindow.open(map); // 使用事件對象的目標作為參數
-
                         const infowindow = new google.maps.InfoWindow({
                             content: contentString
                         });
@@ -178,6 +178,10 @@
                             });
                         });
                         markers.push(marker);
+                        infoWindow.addListener('closeclick', () => {
+                            close();
+                            initMap();
+                        });
                     }
                 }
 
@@ -195,12 +199,11 @@
                     select1Clicked = true;
                 });
 
-
-
                 $(".select2").click(function () {
                     select2Clicked = true;
                 });
                 function updateMapMarkers() {
+
                     const selectedCity = cityDropdown.value;
                     const selectedClinicType = clinicTypeDropdown.value;
                     const filteredClinics = beaches.filter(clinic => {
@@ -242,6 +245,9 @@
                             // 此區塊為callback function，會在動畫結束時被呼叫。
                             $(".modal").css("display", "none"); // 隱藏modal。
                             $(".dialog").css("display", "none"); // 隱藏dialog。
+                            // 重置選擇狀態
+                            select1Clicked = false;
+                            select2Clicked = false;
                         });
                     });
                 }
