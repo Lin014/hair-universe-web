@@ -1,0 +1,57 @@
+.scalpcare-section2 {
+    background-color: #C6AA9D;
+    color: white;
+
+    text-align: start;
+
+    .scalpcare-item {
+        flex-direction: row;
+    }
+
+    img {
+        max-width: 100%;
+        width: 280px;
+        height: 210px;
+        margin: 32px 40px;
+       
+    }
+
+    h5 {
+        margin-top: 32px;
+        flex-wrap: wrap;
+        padding-right: 40px;
+    }
+
+
+    @media (max-width:768px) {
+        .haircare-item {
+            flex-direction: column;
+        }
+
+        img {
+            margin: 30px auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        h5 {
+            margin: 0px;
+            text-align: center;
+        }
+
+       
+    }
+}
+
+.scalpcare-section1 
+{
+    .img
+    {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+
+    }
+
+}

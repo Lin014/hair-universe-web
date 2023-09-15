@@ -1,37 +1,69 @@
-
-    .hair-lifecycle-section1 {
-      background-image: url("../images/2-3/section2-3-0.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-       
-        padding-top: 100px;
-        padding-bottom: 30%;
+.hair-lifecycle-section1 {
+    background-color: #EDE9E3;  
+    .image{
       
-        @include media-breakpoint-down(lg) {
-          padding-top: 100px;
-          padding-bottom: 25%;
-        }
+      width: 80%;
 
-        @include media-breakpoint-down(md) {
-            padding-top: 100px;
-            padding-bottom: 200px;
-          }
-    
-        @include media-breakpoint-down(sm) {
-          padding-top: 100px;
-          padding-bottom: 150px;
-        }
-        h2
-        {
-            margin-top: 300px;
+      @include media-breakpoint-down(lg) 
+      {
+        max-height: 30%;
+        max-width: 30%;
+        height: auto;
+        padding-bottom: 16px;
+      }
 
-        }
+      @include media-breakpoint-down(md) 
+      {
+        max-height: 50%;
+        max-width: 50%;
+        height: auto;
+        padding-bottom: 16px;
+      }
+
+      @include media-breakpoint-down(sm) 
+      {
+        max-height: 80%;
+        max-width: 80%;
+        height: auto;
+        padding-bottom: 16px;
+      }
+    }
   }
   
   
   .hair-lifecycle-section2 {
   
+      .section-block
+      {
+        background-color: #EBE8DF;
+      }
+
+      .section-block-p
+      {
+        width: 80%;
+        height: 80%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+        
+      }
+      .section-block-t
+      {
+          margin: 36px 36px;
+        
+      }
+
+      h3
+      {
+        color: #FFFFFF;
+        border-width: 0px;
+        border-radius: 10px;
+        border-style: solid;
+        background-color: #C8A797;
+        
+      }
+      
+
       .title-block {
         background-color: #decfc0;
         border-radius: 10px;
@@ -50,31 +82,51 @@
     }
 
     .hair-lifecycle-section3 {
-        
+        background-color: #EDE9E3;  
+
         img
         {
             border-radius: 50%;
         }
-        .card
-        {
-            background-color: #FFFFFF;
-            border-width: 0px;
-        }
-        
-        h5
-        {
-            margin-top: 300px;
-        }
+
 
         .title-block {
             background-color: #8C9086;
             border-radius: 10px;
         }
 
-        .context
-        {
-            background-color: #FFF5F0;
-            border-radius: 10px;
+        .wrap{
+          overflow:hidden;
+          border-radius:10px 10px 0px 0px;
+          border-width: 0px;
         }
+        
+        table{
+          border-width: 0px;
+        }
+        
+        th{
+          background-color:#EDE9E3;
+          width:25vw;
+          height:75px;
+          border-width: 0px;
+        }
+        
+        td{
+          background-color:#EDE9E3;
+          width:25vw;
+          height:50px;
+          text-align:center;
+          .dcolor
+          {
+            background-color: #FFF5F0 ;
+          }
+         
+        }
+        
+
+
+       
+
       }
   

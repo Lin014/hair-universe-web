@@ -1,12 +1,6 @@
 .nutrition-section1 {
     background-color: #ebe8df;
   
-    .container {
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-  
     h2 {
       margin-bottom: 250px;
   
@@ -21,25 +15,62 @@
     }
 
     .image {
-        border-radius: 20px;
+      max-height: 350px;
+      max-width: 350px;
+      border-radius: 350px;
+      
 
         @include media-breakpoint-down(md) {
-            padding-left: 100px;
+           
+            max-height: 350px;
+            max-width: 350px;
+            border-radius: 350px;
         }
     
         
         @include media-breakpoint-down(lg) {
-            padding-left: 50px;
+          max-height: 250px;
+          max-width: 250px;
+          border-radius: 250px;
             
-          }
+        }
     }
 
 }
 
-.nutrition-section2{
-    background-color: #ffffff;
 
+.nutrition-section2 {
+  
+  .nutrition-section2-itemsz {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .img {
+      margin: 40px;
+      width: 240px;
+      height: 240px;
+  }
+
+  h5 {
+      text-align: center;
+      font-weight: bold;
+  }
+
+  @media (max-width:768px) {
+
+      .img {
+          margin: 10px auto;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+      }
+  }
 }
+
+
 
 .nutrition-section3 
 {
