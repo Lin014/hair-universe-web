@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>頭髮危機小宇宙</title>
+    <link rel="icon" href="/hair-universe-web/assets/LOGO-9dc5773a.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-  <script type="module" crossorigin src="/hair-universe-web/assets/bootstrap.min-7ebffb03.js"></script>
-  <link rel="stylesheet" href="/hair-universe-web/assets/bootstrap-be831c0f.css">
+  <script type="module" crossorigin src="/hair-universe-web/assets/bootstrap.min-ec1f881d.js"></script>
+  <link rel="stylesheet" href="/hair-universe-web/assets/bootstrap-c1a02dcd.css">
 </head>
-
 
 <body>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,9 +180,7 @@
     </div>
 </nav>
 
-
-
-        <div class="container">
+        <div class="container hair-care-clinic">
             <div class="font-size-base mt-3 mb-4">
                 <nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -196,38 +194,48 @@
                 <div>
                     <h4>地區</h4>
                     <div class="item">
-                        <select id="Region" class="select">
+                        <select id="Region" class="select1">
                             <option disabled selected value="Region">選取所在地區</option>
-                            <option class="item" value="taipei">台北市</option>
-                            <option class="item" value="newtaipei">新北市</option>
-                            <option class="item" value="taoyuan">桃園市</option>
-                            <option class="item" value="hsinchu">新竹市</option>
-                            <option class="item" value="taichung">台中市</option>
-                            <option class="item" value="tainan">台南市</option>
-                            <option class="item" value="kaohsiung">高雄市</option>
+                            <option class="item" value="台北市">台北市</option>
+                            <option class="item" value="桃園市">桃園市</option>
+                            <option class="item" value="新竹縣">新竹縣</option>
+                            <option class="item" value="台中市">台中市</option>
+                            <option class="item" value="台南市">台南市</option>
+                            <option class="item" value="高雄市">高雄市</option>
                         </select>
                     </div>
-
                 </div>
-
                 <div class="ms-4">
                     <h4>診所類型</h4>
-                    <select id="ClinicType" class="select">
+                    <select id="Clinic" class="select2">
                         <option disabled selected value="Clinic">選取適合的診所類型</option>
-                        <option class="item" value="taipei">植髮診所</option>
-                        <option class="item" value="newtaipei">美學診所</option>
-                        <option class="item" value="taoyuan">頭髮護理診所</option>
+                        <option class="item" value="植髮診所">植髮診所</option>
+                        <option class="item" value="美學診所">美學診所</option>
+                        <option class="item" value="頭髮護理診所">頭髮護理診所</option>
                     </select>
                 </div>
             </div>
             <div id="map" class="map mt-36 mb-100"></div>
         </div>
+        <div class="dialog_modal">
+            <div class="dialog">
+                <div class="title">診所搜尋</div>
+                <div class="content">
+                    <div>未找到相應的診所。</div>
+                </div>
+                <div class="buttons">
+                    <div class="okBtn">確定</div>
+                </div>
+            </div>
+        </div>
+
         <footer class="bg-primary">
     <div class="container">
         <div class="d-flex flex-column justify-content-between flex-md-row text-center">
             <h1 class="py-4 text-white text-left">頭髮危機小宇宙</h1>
             <div class="d-flex d-lg-block justify-content-center">
-                <a href="#"><img class="img-fluid custom-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAQAAABQ8GUWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cICw8wEgdHTdwAAAXRSURBVHja7VtbSFRdGF3fcdSK6q9QkSDEHryQUUgF3Sy1C0khWJbQDbpIj71EIuFLPXejoBTSHscHzaCXqKBiwsuMEYY6GlFCZWrh3cZsr//hZNM4ozXjzGytFgwzZ/Y+31lr7XPZ59t7CyaAKjISOHAAkpcHrFkDxMUB0dGYlXC5gK4usKEBUlUFWq1ijI1NWp3cupVsa+MfC6eTKiPDt3h1+DA5OqqbYujhclEdOuSj5f8G8T+bsHkzAAiVxQI0NUFSUnRfseFFWxuYlmYABQV/n3gASEqC5Ocb5t3+LwX37hWyowNYtkw3Fz1480bIL19m73N+unC5hCR109AJQzcB3fhngG4CumEJz2F6ewGbDbDbgdZWoKMD6OwEv34FRCCRkUB8PJCQAKSkAGvXAhs3AgsWhJxa6LqbfX1UZWVkZqbZ2/STl4qKotq2jSwvpxocDBXL4BugurvJoiKq4LUeuWgR1blz5KdPM9gApcjr18nFi0N2tqqYGPOsUmqGGdDVRbVzZ6iEexuxezfZ0zNDDGhtJZcvD5d4twlpaeSHD3oNUK9ekUuXhlv8DxOYmEi+fq3JgL4+qqQkXeLdJqxYQQ4MaDDg4EHd4t0mHD8eZgMePdIt2tMAEfLp0/AZ8D2fNpNAZmUFIiWA1+EXL0RWr56UiIqOhhQWAvfvizidnmWRkcDp00BdnRhPnphPj9xc4MYNkZERt5jUVCArC7x5U4yxMfLYMWDi/aa2VuTOHc/4LS1+p/f896ykZOp4eXlmPavVu2z9erOsvt7cvn3b3K6o8Kx39675/65dVAkJvnl8+UIahud+58/7qyaAlyGbbery8ezS3Lne7lgskO/fHnWPHqWy2cQoK/P8f86cH785NAS5ds0drKFBRCnP+E+fQvxTE4ABzc3+7/MbkKtXycZGEYfDd/ngoEhR0dRBPC+50BjAz5+Dr767G4iNBa1Wcs0a33X++4+qstK9/fChGDdvepr08WPoDRCLxRx0DCJ44QLk5ElIWhpQUQGKeJ/Kc+ZA8vPd29nZwAQDMDoaegMYEwMMDQXVABkaAvbtA+rrgdxciC8h/f3AmTNuHo2N3txiY8NwD0hOBt6+DaoBAEScTvLIEaC6GoiK8q4xMiJSWjp1lMkfz5PB/5ygbNnyexUzMki73fzU11OdOPFrE2pqwIsXfZcuWeKOZ7eTly55B8jM9FuP//2A5mZSZPJ4mZm+96upoVq50vxtdqXJK1dI8udcApXFQj5+TCpFtW4dVWws6XJ5x+vtJSMi3McVMbn5h8AGRrh9uxgPHkxuQno6uGSJu2WUAu12Mfr7zbKODjF6esyeYXKyGC9feuyvoqIgiYnjPUkyORmcOHzX3i6G+1Ikc3KAe/fCcAaQ5LNnE3thOkEaBmmzBaJkGq/DhYW6hbsNOHs2UBXTMGB4mGrtWv3i09N93yNCbgBJvn1LlZCgT/y8eVQtLdNREISkaEcHGf4ZJmREBGm1Tpd9kNLifX1kQUH4xItQlZYGg3mQR4Zu3SLj40NvwOXLwWIcgrHB/n6ypIQqJibowlV0tDuJMmMNGMfwsEk2J4fKV9/eX/FxcYE+66dCeKbIcGgIqK2F1NWBTifw/LkYTU2/L37VKkhNjTl8HmxuWqAUuWHDr4VbLGRxsZn/Cw3CNEFiIkTA+fOnbpgVK4DycnOyROigrz8v7975FK6iosjiYsDhCLV484C6oBYu9OQhQpWfT7a3h5OGHgPU4KBnq+/YQTocOqhomihJAnv2gAMDQEkJJDs7/BxM/JspqpuAbvwzQDcB3TCCPsozq+ByGYD/42l/Dt6/N0C7XTcNfXA4DEhVlW4a+lBdLeboSlMTkJqqm0544XSCaWmGyLdv4KlTwNevuimFD6Oj4IkTHuuIqQ4dmk5+ffbA5Zp0jiNVRoY59/cPhWppodq06WfN4m2CxQLZvx8YXz4fHz97l9W5XEBnp7lSpaoKrKycuHz+fwuHr+ujHRy4AAAAAElFTkSuQmCC" alt="line icon"></a>
+                <a href="#"><img class="img-fluid custom-icon" src="data:image/png;base64,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"
+                        alt="line icon"></a>
                 <a class="mx-3" href="#"><img class="img-fluid custom-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABAEAQAAABQ8GUWAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAlwSFlzAAAAYAAAAGAA8GtCzwAAAAd0SU1FB+cICw8vK5UYy0oAAAMdSURBVHja7Zu/TyJREMe/86Sw0IJCqVSw8AfqH0CwsDCBAisLE7E3sTfaaUmhViYEY2Eh9lYUGhNJLCzBaKFEMZoQ0ARjMBCBnSs477zLcbdywCi7n5bZ977zZd7b2c1bwh9gbWAA5PcDXi/Q1wd0dwNE+FIwA5kMcHsLRCLgcJjU1dXfL9E6O5lDIeZikVuOYpE5GGSto6NK8r29zGdn0jIbTzzOWk/PW9709s+DTk6AsTHpwm0OFxdgl4vU87Oq2LC2ZpzkAcDpBAUCAECVDe/8HLBYpGU1l1IJPDysQHNzxkseACwWkN+vAI9HWooY7PUqwOGQ1iEGORzEXC4DSklrkUHTiJlZWoYkn2zzKxSAw0Pw8TEolQKn07ovJZsN2N398JTSfVmFbJZ5eblqm6orD7u9lpnlK4CPjoCZGVKPjxLTC29+OzuAxyOVvLAB0Sh4fp5UqSSnQcyApyfw9DSp11fJ5AUNCAQky/49An1AoQDu6iKVy9VzVGa7Hbi5+eh1AhVwcFDv5P+H5hvA0ah00rIG0P29dNLvEWiEHh70RrI2Pg5yu/VFW61fxIByWXcoTU4CKyuNVGPQx2DTANMA0wDTANMAAI14FuDTU9DsbPWAVIoon9c1FFut+u/vo6PA/v5H5TagD8jnia6v6zESUTYLZLN6YpldrlrmaKEl4HQa3ICREYMbYOAKYG5vB/r7DWsAMDQEtLUZ2IDa1n8LGVDb+m8hA8wKqLkC6t8J0uAgcyhU9XdeXyd1ealnKNampkA+378ja7sDVCZpOhMT+rWtrjZaTYssgdoxDZAWII1pgLQAaUwDpAVIYxogLUAa0wBpAdIoQNOkRcihaQr4HKe1ZMhkFJBMSssQg5NJBUQi0jrEoEhEgcNhQPa4qgzFInhvT1U+J93elpbTfLa2SCUSldsgLy4C8bi0pOYRiwFLS8D3PoBULgf2+YxhQiwG9vmIXl5+GFAx4e4O7HYDwWBr7gnFIrC5CbjdpH4e1vzlrXDlDO/CAmsbGyC/H+z1gux2wGb7mp/Pp9PgZBIUiYD39kglEr9HfQOl3EqXXx0+vwAAAABJRU5ErkJggg=="
                         alt="facebook icon"></a>
                 <a href="#"><img class="img-fluid custom-icon" src="data:image/png;base64,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"
@@ -235,7 +243,7 @@
             </div>
         </div>
 
-        <div class="d-lg-flex justify-content-between">
+        <div class="d-lg-flex justify-content-between footer-style">
             <ul class="ps-0 d-xl-block d-none">
                 <li>
                     <h3 class="fs-20 fw-bold"><a href="hairpedia.html">頭髮小百科</a></h3>
@@ -274,6 +282,7 @@
             <ul class="ps-0 d-xl-block d-none">
                 <li>
                     <h3 class="fs-20 fw-bold"><a href="hair_care_clinic.html">頭髮保養診所</a></h3>
+                <li><a href="hair_care_clinic.html">地圖索引</a></li>
                 </li>
             </ul>
             <div class="d-flex align-items-end mt-76 d-none d-lg-block">
@@ -283,73 +292,190 @@
                 </form>
             </div>
         </div>
-        <div class="text-center fs-10 text-white pb-1">Copyright © 2023. All rights reserved.</div>
+        <div class="text-center fs-10 text-white pb-4">Copyright © 2023. All rights reserved.</div>
     </div>
 </footer>            
-
-            <script>
-                let map;
-                let currentPosition;
-                let markers = {};
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        center: { lat: 23.553118, lng: 121.0211024 },
-                        zoom: 8,
-                    });
-
-                    navigator.geolocation.getCurrentPosition(function (position) {
-                        currentPosition = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude,
-                        };
-                        map.setCenter(currentPosition);
-                        map.setZoom(16);
-                        const autocomplete = new google.maps.places.Autocomplete(
-                            document.getElementById('Region'), {
-                            types: ['geocode'],
-                            componentRestrictions: { country: 'TW' },
-
-                        });
-                    });
-                }
-
-                const regionSelect = document.getElementById('Region');
-                const clinicTypeSelect = document.getElementById('ClinicType');
-                regionSelect.addEventListener('change', performSearch);
-                clinicTypeSelect.addEventListener('change', performSearch);
-                performSearch();
-
-                function performSearch() {
-                    const selectedRegion = regionSelect.value;
-                    const selectedClinicType = clinicTypeSelect.value;
-                    searchOnMap(selectedRegion, selectedClinicType);
-                }
-                function searchOnMap(region, clinicType) {
-                    const map = new google.maps.Map(document.getElementById('map'), {
-                        center: { lat: 23.553118, lng: 121.0211024 },
-                        zoom: 8,
-                    });
-
-                    const clinics = [
-                        { name: 'DCDC', location: { lat: 24.8202131, lng: 121.0245482 }, region: 'region1', type: 'clinicType1' },
-                        { name: 'i hair 風華御髮', location: { lat: 24.789, lng: 46.789 }, region: 'region2', type: 'clinicType2' },
-                    ];
-
-                    const matchingClinics = clinics.filter(clinic => clinic.region === region && clinic.type === clinicType);
-                    matchingClinics.forEach(clinic => {
-                        const marker = new google.maps.Marker({
-                            position: clinic.location,
-                            map: map,
-                            title: clinic.name,
-                        });
-                    });
-                }
-
-
-            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script async
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxZtWhhKYtMFtj6eM9ek-c6Qtpkht5yA&libraries=places&callback=initMap">
                 </script>
+            <script>
+                let map;
+                let markers = [];
+                let infoWindow;
+                const beaches = [
+                    ["DCDC生髮診所總院", 25.0422681, 121.5424544, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/5", "台北市大安區大安路一段75巷21號2樓"],
+                    ["DCDC生髮診所竹北院區", 24.8153831, 121.0217587, "植髮診所", "新竹縣", "https://dcdchair.com.tw/clinics/6", "新竹縣竹北市自強南路182號3樓"],
+                    ["DCDC生髮診所高雄院區", 22.6610928, 120.3075843, "植髮診所", "高雄市", "https://dcdchair.com.tw/clinics/7", "高雄市左營區明誠二路180號2樓"],
+                    ["DCDC生髮診所台北旗艦店", 25.0425358, 121.5452807, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/8", "台北市大安區敦化南路一段190巷12號"],
+                    ["DCDC生髮診所台中院區", 24.157512, 120.6470562, "植髮診所", "台中市", "https://dcdchair.com.tw/clinics/11", "台中市西屯區文心路二段566之1號3樓之2"],
+                    ["ihair 風華御髮台北古亭店", 25.0278009, 121.522166, "美學診所", "台北市", "https://www.ihairtransplantclinic.com/taipei/ihair-taipei", " 台北市大安區羅斯福路二段33號4樓"],
+                    ["ihair 風華御髮桃園中正店", 24.9965827, 121.3093853, "美學診所", "桃園市", "https://www.ihairtransplantclinic.com/taoyuan/ihair-taoyuan", " 桃園市桃園區中正路271號3樓"],
+                    ["ihair 風華御髮新竹竹北高鐵店", 24.8071615, 121.0370423, "美學診所", "新竹縣", "https://www.ihairtransplantclinic.com/hsinchu/ihair-hsinchu", "新竹縣竹北市高鐵二路38號一樓"],
+                    ["ihair 風華御髮台中新國店", 24.1568519, 120.6464849, "美學診所", "台中市", "https://www.ihairtransplantclinic.com/taichung/ihair-taichung", "台中市西屯區市政北一路1號1樓 1-D2"],
+                    ["ihair 風華御髮台南崇明店", 22.9750387, 120.2226316, "美學診所", "台南市", "https://www.ihairtransplantclinic.com/tainan/ihair-tainan", "台南市東區崇明路377-1號2樓"],
+                    ["ihair 風華御髮高雄巨蛋店", 22.6647775, 120.3004661, "美學診所", "高雄市", "https://www.ihairtransplantclinic.com/kaohsiung/", "高雄市鼓山區文信路234號2樓"],
+                    ["勻禾妍美學健康診所", 22.6856517, 120.3071755, "美學診所", "高雄市", "https://www.icarebeauty.com.tw/", "高雄市左營區文學路25號"],
+                    ["H&H 醫髮診所", 25.04589, 121.5410691, "頭髮護理診所", "台北市", "https://www.2h.com.tw/", "台北市中山區復興南路一段36-9號9F"],
+
+                ];
+                function initMap() {
+                    const mapElement = document.getElementById("map");
+                    const defaultPosition = { lat: 25.0422681, lng: 121.5424544 }; // 預設位置（台北市）
+
+                    map = new google.maps.Map(mapElement, {
+                        center: defaultPosition,
+                        zoom: 16,
+                    });
+                    infoWindow = new google.maps.InfoWindow();
+
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(
+                            function (position) {
+                                const currentPosition = {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude,
+                                };
+                                initializeMap(currentPosition);
+                            },
+                            function (error) {
+                                console.error("獲取地理位置失敗:", error);
+                                initializeMap(defaultPosition); // 使用預設位置
+                            }
+                        );
+                    } else {
+                        console.error("瀏覽器不支持地理位置");
+                        initializeMap(defaultPosition); // 使用預設位置
+                    }
+
+                    setMarkers(beaches);
+                }
+                function initializeMap(position) {
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        center: position,
+                        zoom: 16,
+                    });
+                    const infoWindow = new google.maps.InfoWindow();
+
+                    setMarkers(beaches);
+                }
+
+                const cityDropdown = document.getElementById("Region");
+                const clinicTypeDropdown = document.getElementById("Clinic");
+                cityDropdown.addEventListener("change", updateMapMarkers, { passive: true });
+                clinicTypeDropdown.addEventListener("change", updateMapMarkers, { passive: true });
+
+                function setMarkers(clinics) {
+                    clearMarkers();
+                    for (let i = 0; i < clinics.length; i++) {
+                        const clinic = clinics[i];
+                        const clinicName = clinic[0];
+                        const latLng = { lat: clinic[1], lng: clinic[2] };
+                        const marker = new google.maps.Marker({
+                            position: latLng,
+                            map: map,
+                            title: clinicName,
+                        });
+
+                        const clinicType = clinic[3];
+                        const clinicCity = clinic[4];
+                        const clinicOfficalWebsite = clinic[5];
+                        const clinicAddress = clinic[6];
+                        const contentString = `
+                            <div>
+                                <h2>${clinicName}</h2>
+                                <p>診所類型: ${clinicType}</p>
+                                <p>所在地區: ${clinicCity}</p>
+                                <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
+                                <p>地址: ${clinicAddress}</p>
+                            </div>
+                        `;
+
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map); // 使用事件對象的目標作為參數
+
+                        const infowindow = new google.maps.InfoWindow({
+                            content: contentString
+                        });
+                        marker.addListener("click", function () {
+                            infoWindow.open({
+                                anchor: marker,
+                                map,
+                            });
+                            displayClinicInfo(clinin);
+                        });
+                        markers.push(marker);
+                    }
+                }
+
+                function clearMarkers() {
+                    for (let i = 0; i < markers.length; i++) {
+                        markers[i].setMap(null);
+                    }
+                    markers = [];
+                }
+
+                var select1Clicked = false;
+                var select2Clicked = false;
+
+                $(".select1").click(function () {
+                    select1Clicked = true;
+                });
+
+                $(".select2").click(function () {
+                    select2Clicked = true;
+                });
+                function updateMapMarkers() {
+                    const selectedCity = cityDropdown.value;
+                    const selectedClinicType = clinicTypeDropdown.value;
+                    const filteredClinics = beaches.filter(clinic => {
+                        const clinicCity = clinic[4];
+
+                        return (selectedCity === "All" || clinicCity === selectedCity) &&
+                            (selectedClinicType === "All" || clinic[3] === selectedClinicType);
+                    });
+
+                    // 清除之前的標記
+                    clearMarkers();
+
+                    if (filteredClinics.length > 0) {
+                        // 有符合條件的診所，設置標記
+                        setMarkers(filteredClinics);
+                        const firstClinic = filteredClinics[0];
+                        const latLng = { lat: firstClinic[1], lng: firstClinic[2] };
+                        map.setCenter(latLng);
+                    } else {
+                        if (select1Clicked && select2Clicked) {
+                            showNoResultsDialog();
+                        }
+                    }
+                }
+                function showNoResultsDialog() {
+                    $(".modal").css("display", "block"); // 顯示modal，遮住畫面背景。
+                    $(".dialog").css("display", "block"); // 顯示dialog。
+
+                    $(".dialog").animate({
+                        opacity: '1',
+                        top: '160px' // 決定對話框要滑到哪個位置停止。		   
+                    }, 550);
+
+                    $(".okBtn").click(function () {
+                        $(".dialog").animate({
+                            opacity: '0',
+                            top: '-50px' // 需與CSS設定的起始位置相同，以保證下次彈出視窗的效果相同。			   
+                        }, 350, function () {
+                            // 此區塊為callback function，會在動畫結束時被呼叫。
+                            $(".modal").css("display", "none"); // 隱藏modal。
+                            $(".dialog").css("display", "none"); // 隱藏dialog。
+                        });
+                    });
+                }
+            </script>
+            <script>
+
+            </script>
+            <!-- <script type="module" src="../assets/js/pages/hair_care_clinic.js"></script> -->
 </body>
 
 </html>
