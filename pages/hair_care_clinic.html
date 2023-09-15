@@ -54,7 +54,7 @@
             <div class="dialog">
                 <div class="title">診所搜尋</div>
                 <div class="content">
-                    <div>未找到相應的診所。請嘗試不同的選擇</div>
+                    <div>未找到相應的診所。</div>
                 </div>
                 <div class="buttons">
                     <div class="okBtn">確定</div>
@@ -125,7 +125,7 @@
                         center: position,
                         zoom: 16,
                     });
-                    infoWindow = new google.maps.InfoWindow();
+                    const infoWindow = new google.maps.InfoWindow();
 
                     setMarkers(beaches);
                 }
@@ -147,8 +147,32 @@
                             title: clinicName,
                         });
 
-                        marker.addListener("click", function (event) {
-                            displayClinicInfo(clinic, event);
+                        const clinicType = clinic[3];
+                        const clinicCity = clinic[4];
+                        const clinicOfficalWebsite = clinic[5];
+                        const clinicAddress = clinic[6];
+                        const contentString = `
+                            <div>
+                                <h2>${clinicName}</h2>
+                                <p>診所類型: ${clinicType}</p>
+                                <p>所在地區: ${clinicCity}</p>
+                                <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
+                                <p>地址: ${clinicAddress}</p>
+                            </div>
+                        `;
+
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map); // 使用事件對象的目標作為參數
+
+                        const infowindow = new google.maps.InfoWindow({
+                            content: contentString
+                        });
+                        marker.addListener("click", function () {
+                            infoWindow.open({
+                                anchor: marker,
+                                map,
+                            });
+                            displayClinicInfo(clinin);
                         });
                         markers.push(marker);
                     }
@@ -161,25 +185,6 @@
                     markers = [];
                 }
 
-                function displayClinicInfo(clinic, event) {
-                    const clinicName = clinic[0];
-                    const clinicType = clinic[3];
-                    const clinicCity = clinic[4];
-                    const clinicOfficalWebsite = clinic[5];
-                    const clinicAddress = clinic[6];
-                    const contentString = `
-                        <div>
-                            <h2>${clinicName}</h2>
-                            <p>診所類型: ${clinicType}</p>
-                            <p>所在地區: ${clinicCity}</p>
-                            <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
-                            <p>地址: ${clinicAddress}</p>
-                        </div>
-                    `;
-
-                    infoWindow.setContent(contentString);
-                    infoWindow.open(map, event.target); // 使用事件對象的目標作為參數
-                }
                 var select1Clicked = false;
                 var select2Clicked = false;
 
@@ -202,6 +207,7 @@
 
                     // 清除之前的標記
                     clearMarkers();
+
                     if (filteredClinics.length > 0) {
                         // 有符合條件的診所，設置標記
                         setMarkers(filteredClinics);

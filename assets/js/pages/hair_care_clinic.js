@@ -1,5 +1,3 @@
-import 'default-passive-events';
-
 let map;
 let markers = [];
 let infoWindow;
@@ -55,7 +53,7 @@ function initializeMap(position) {
         center: position,
         zoom: 16,
     });
-    infoWindow = new google.maps.InfoWindow();
+    const infoWindow = new google.maps.InfoWindow();
 
     setMarkers(beaches);
 }
@@ -91,7 +89,6 @@ function clearMarkers() {
     markers = [];
 }
 
-
 function displayClinicInfo(clinic, event) {
     const clinicName = clinic[0];
     const clinicType = clinic[3];
@@ -99,18 +96,28 @@ function displayClinicInfo(clinic, event) {
     const clinicOfficalWebsite = clinic[5];
     const clinicAddress = clinic[6];
     const contentString = `
-        <div>
-            <h2>${clinicName}</h2>
-            <p>診所類型: ${clinicType}</p>
-            <p>所在地區: ${clinicCity}</p>
-            <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
-            <p>地址: ${clinicAddress}</p>
-        </div>
-    `;
+                        <div>
+                            <h2>${clinicName}</h2>
+                            <p>診所類型: ${clinicType}</p>
+                            <p>所在地區: ${clinicCity}</p>
+                            <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
+                            <p>地址: ${clinicAddress}</p>
+                        </div>
+                    `;
+
     infoWindow.setContent(contentString);
     infoWindow.open(map, event.target); // 使用事件對象的目標作為參數
 }
+var select1Clicked = false;
+var select2Clicked = false;
 
+$(".select1").click(function () {
+    select1Clicked = true;
+});
+
+$(".select2").click(function () {
+    select2Clicked = true;
+});
 function updateMapMarkers() {
     const selectedCity = cityDropdown.value;
     const selectedClinicType = clinicTypeDropdown.value;
@@ -124,18 +131,35 @@ function updateMapMarkers() {
     // 清除之前的標記
     clearMarkers();
 
-    if (filteredClinics.length === 0) {
-        window.alert("沒有找到相應的診所。");
-        return;
-    }
-
-    // 設置新的標記
-    setMarkers(filteredClinics);
-
     if (filteredClinics.length > 0) {
+        // 有符合條件的診所，設置標記
+        setMarkers(filteredClinics);
         const firstClinic = filteredClinics[0];
         const latLng = { lat: firstClinic[1], lng: firstClinic[2] };
         map.setCenter(latLng);
+    } else {
+        if (select1Clicked && select2Clicked) {
+            showNoResultsDialog();
+        }
     }
 }
+function showNoResultsDialog() {
+    $(".modal").css("display", "block"); // 顯示modal，遮住畫面背景。
+    $(".dialog").css("display", "block"); // 顯示dialog。
 
+    $(".dialog").animate({
+        opacity: '1',
+        top: '160px' // 決定對話框要滑到哪個位置停止。		   
+    }, 550);
+
+    $(".okBtn").click(function () {
+        $(".dialog").animate({
+            opacity: '0',
+            top: '-50px' // 需與CSS設定的起始位置相同，以保證下次彈出視窗的效果相同。			   
+        }, 350, function () {
+            // 此區塊為callback function，會在動畫結束時被呼叫。
+            $(".modal").css("display", "none"); // 隱藏modal。
+            $(".dialog").css("display", "none"); // 隱藏dialog。
+        });
+    });
+}
