@@ -1,8 +1,45 @@
+.header-nav, .nav2 {
+  a {
+    border-radius: 5px;
+    &:hover {
+      opacity: 0.8;
+      color: white;
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-down(xl) {
+      display: none !important;
+    }
+    
+    &:hover {
+      .sub-menu {
+        display: block;
+        width: 180px;
+        position: absolute;
+        background-color: $primary;
+        filter: drop-shadow(0px 4px 4px rgba($color: $beige, $alpha: 0.6));
+      }
+    }
+  }
+
+  .sub-menu {
+    display: none;
+  }
+}
+
+.nav2 {
+  display: none !important;
+
+  @include media-breakpoint-down(xl) {
+    display: block !important;
+  }
+}
+
 nav {
   line-height: 1.5;
   color: white;
-  font-family: 'Noto Sans TC', sans-serif;
-
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 li a:hover {
@@ -15,80 +52,16 @@ li a:hover {
   font-size: $h3-font-size;
 }
 
-
-
 .logo {
   max-width: 100%;
   width: 70px;
   height: 70px;
-  margin-right: $spacer * 3;
+  margin-right: $spacer;
 }
 
 @media (max-width: 767px) {
   .logo {
-    margin-right: 2px;
+    width: 50px;
+  height: 50px;
   }
-
-  h1 {
-    font-size: $spacer ;
-  }
-}
-
-.navbar .navbar-nav .nav-link {
-  color: white !important;
-}
-
-/* 隱藏下拉式選單的三角形 */
-.navbar-nav .nav-item .dropdown-toggle::after {
-  content: none;
-}
-
-.dropdown-toggle { 
-  width: 100%;
-  text-align: left;
-}
-
-/* 自訂下拉式選單的背景顏色和文字顏色 */
-.dropdown-menu {
-  overflow-y: visible;
-  background-color: $brown;
-  color: $dark-brown;
-}
-
-/* 自訂下拉式選單的選項樣式 */
-.dropdown-item {
-  color: white !important;
-  background-color: $brown !important;
-}
- 
-.dropdown-item:hover {
-  color: $dark-brown !important;
-}
-
-@media (max-width: 767px) {
-
-  .dropdown-toggle {
-    width: 100%;
-    text-align: left;
-    overflow-y: hidden;
-    background-color: $brown;
-  }
-
-  .dropdown-menu {
-    max-height: none;
-    overflow-y: auto;
-    background-color: $brown;
-  }
-
-  .dropdown-menu a {
-    color: white;
-    display: block;
-    background-color: $brown;
-  }
-
-  .dropdown-divider {
-    background-color: $brown;
-  }
-
-
 }
