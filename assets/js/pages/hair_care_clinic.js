@@ -65,9 +65,6 @@ const clinicTypeDropdown = document.getElementById("Clinic");
 cityDropdown.addEventListener("change", updateMapMarkers, { passive: true });
 clinicTypeDropdown.addEventListener("change", updateMapMarkers, { passive: true });
 
-
-
-
 function setMarkers(clinics) {
     clearMarkers();
     for (let i = 0; i < clinics.length; i++) {
@@ -124,6 +121,15 @@ function updateMapMarkers() {
             (selectedClinicType === "All" || clinic[3] === selectedClinicType);
     });
 
+    // 清除之前的標記
+    clearMarkers();
+
+    if (filteredClinics.length === 0) {
+        window.alert("沒有找到相應的診所。");
+        return;
+    }
+
+    // 設置新的標記
     setMarkers(filteredClinics);
 
     if (filteredClinics.length > 0) {
@@ -132,3 +138,4 @@ function updateMapMarkers() {
         map.setCenter(latLng);
     }
 }
+

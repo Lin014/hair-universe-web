@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>頭髮危機小宇宙</title>
+    <link rel="icon" href="/assets/images/LOGO.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal {
+        position: absolute;
+        z-index: 10;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #6a6a6aa6;
+    }
+
+    .dialog {
+        position: absolute;
+        z-index: 11;
+        /* 將對話框水平置中。 */
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: -10px;
+        /* 設定對話框的起始位置。 對話框滑動的距離與時間會影響淡入效果，可以自行嘗試調整。 */
+        opacity: 0;
+        /* 將對話框設為透明。 */
+        display: none;
+        /* 隱藏對話框。 */
+        width: 90%;
+        /* 對話框寬度。 */
+        background: white;
+        box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        line-height: 1.7em;
+    }
+
+    .title {
+        text-align: center;
+        padding: 8px;
+        font-size: 20px;
+        background: #1f7038ad;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+        border: 1px #f2e6e6 solid;
+        box-shadow: 0px 2px 8px 1px rgb(0 0 0 / 15%);
+    }
+
+    .content {
+        padding: 4px 8px;
+    }
+
+    .buttons {
+        /* 加上這兩個CSS，可以讓button移動到對話框下方。 */
+        /*position: absolute;
+        right: 0px;
+        */
+        text-align: right;
+        padding: 8px 14px;
+    }
+
+    .okBtn {
+        display: inline-block;
+        background: #092b68b3;
+        color: #ffffffeb;
+        border-radius: 8px;
+        border: 1px solid white;
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+
+    .cancelBtn {
+        display: inline-block;
+        background: #e90202ad;
+        color: #ffffffeb;
+        border-radius: 8px;
+        border: 1px solid white;
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+</style>
+<div class="modal"></div>
+<div class="dialog">
+    <div class="title">標題</div>
+    <div class="content">
+        <div>這裡可以放入任何內容，無論是純文字或html版型都可以。</div>
+        <div>此範例的CSS看起來略微複雜，但大部份只是樣式設定，可以隨個人喜好調整、增加、刪除。</div>
+        <div>與動畫效果相關性較高的部份都有加上註解，希望能幫助到你。</div>
+    </div>
+    <div class="buttons">
+        <div class="cancelBtn">取消</div>
+        <div class="okBtn">確定</div>
+    </div>
+</div>
+
+<button class="showDialogBtn" style="margin: 30px;">show dialog</button>
+
+<script>
+    $(".showDialogBtn").click(function () {
+        $(".modal").css("display", "block"); // 顯示modal，遮住畫面背景。
+        $(".dialog").css("display", "block"); // 顯示dialog。
+
+        $(".dialog").animate({
+            opacity: '1',
+            top: '50px' // 決定對話框要滑到哪個位置停止。		   
+        }, 550);
+    });
+
+    $(".cancelBtn").click(function () {
+        $(".dialog").animate({
+            opacity: '0',
+            top: '-50px' // 需與CSS設定的起始位置相同，以保證下次彈出視窗的效果相同。			   
+        }, 350, function () {
+            // 此區塊為callback function，會在動畫結束時被呼叫。
+            $(".modal").css("display", "none"); // 隱藏modal。
+            $(".dialog").css("display", "none"); // 隱藏dialog。
+        });
+    });	
+</script>

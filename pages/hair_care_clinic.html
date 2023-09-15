@@ -27,7 +27,7 @@
                 <div>
                     <h4>地區</h4>
                     <div class="item">
-                        <select id="Region" class="select">
+                        <select id="Region" class="select1">
                             <option disabled selected value="Region">選取所在地區</option>
                             <option class="item" value="台北市">台北市</option>
                             <option class="item" value="桃園市">桃園市</option>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="ms-4">
                     <h4>診所類型</h4>
-                    <select id="Clinic" class="select">
+                    <select id="Clinic" class="select2">
                         <option disabled selected value="Clinic">選取適合的診所類型</option>
                         <option class="item" value="植髮診所">植髮診所</option>
                         <option class="item" value="美學診所">美學診所</option>
@@ -50,8 +50,22 @@
             </div>
             <div id="map" class="map mt-36 mb-100"></div>
         </div>
+        <div class="dialog_modal">
+            <div class="dialog">
+                <div class="title">診所搜尋</div>
+                <div class="content">
+                    <div>未找到相應的診所。請嘗試不同的選擇</div>
+                </div>
+                <div class="buttons">
+                    <div class="okBtn">確定</div>
+                </div>
+            </div>
+        </div>
+
         <%- include('./layout/footer'); -%>
             <script type="module" src="../main.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <script async
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcxZtWhhKYtMFtj6eM9ek-c6Qtpkht5yA&libraries=places&callback=initMap">
                 </script>
@@ -121,9 +135,6 @@
                 cityDropdown.addEventListener("change", updateMapMarkers, { passive: true });
                 clinicTypeDropdown.addEventListener("change", updateMapMarkers, { passive: true });
 
-
-
-
                 function setMarkers(clinics) {
                     clearMarkers();
                     for (let i = 0; i < clinics.length; i++) {
@@ -150,7 +161,6 @@
                     markers = [];
                 }
 
-
                 function displayClinicInfo(clinic, event) {
                     const clinicName = clinic[0];
                     const clinicType = clinic[3];
@@ -166,10 +176,20 @@
                             <p>地址: ${clinicAddress}</p>
                         </div>
                     `;
+
                     infoWindow.setContent(contentString);
                     infoWindow.open(map, event.target); // 使用事件對象的目標作為參數
                 }
+                var select1Clicked = false;
+                var select2Clicked = false;
 
+                $(".select1").click(function () {
+                    select1Clicked = true;
+                });
+
+                $(".select2").click(function () {
+                    select2Clicked = true;
+                });
                 function updateMapMarkers() {
                     const selectedCity = cityDropdown.value;
                     const selectedClinicType = clinicTypeDropdown.value;
@@ -180,16 +200,42 @@
                             (selectedClinicType === "All" || clinic[3] === selectedClinicType);
                     });
 
-                    setMarkers(filteredClinics);
-
+                    // 清除之前的標記
+                    clearMarkers();
                     if (filteredClinics.length > 0) {
+                        // 有符合條件的診所，設置標記
+                        setMarkers(filteredClinics);
                         const firstClinic = filteredClinics[0];
                         const latLng = { lat: firstClinic[1], lng: firstClinic[2] };
                         map.setCenter(latLng);
+                    } else {
+                        if (select1Clicked && select2Clicked) {
+                            showNoResultsDialog();
+                        }
                     }
                 }
+                function showNoResultsDialog() {
+                    $(".modal").css("display", "block"); // 顯示modal，遮住畫面背景。
+                    $(".dialog").css("display", "block"); // 顯示dialog。
 
+                    $(".dialog").animate({
+                        opacity: '1',
+                        top: '160px' // 決定對話框要滑到哪個位置停止。		   
+                    }, 550);
 
+                    $(".okBtn").click(function () {
+                        $(".dialog").animate({
+                            opacity: '0',
+                            top: '-50px' // 需與CSS設定的起始位置相同，以保證下次彈出視窗的效果相同。			   
+                        }, 350, function () {
+                            // 此區塊為callback function，會在動畫結束時被呼叫。
+                            $(".modal").css("display", "none"); // 隱藏modal。
+                            $(".dialog").css("display", "none"); // 隱藏dialog。
+                        });
+                    });
+                }
+            </script>
+            <script>
 
             </script>
             <!-- <script type="module" src="../assets/js/pages/hair_care_clinic.js"></script> -->

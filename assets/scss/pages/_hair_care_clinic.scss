@@ -20,3 +20,73 @@
         font-size: 16px !important;
     }
 }
+
+.dialog_modal {
+
+    .modal {
+        position: absolute;
+        z-index: 10;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: #6a6a6aa6;
+    }
+
+    .dialog {
+        position: absolute;
+        z-index: 11;
+        /* 將對話框水平置中。 */
+        left: 50%;
+        transform: translate(-50%, 0%);
+        top: -10px;
+        /* 設定對話框的起始位置。 對話框滑動的距離與時間會影響淡入效果，可以自行嘗試調整。 */
+        opacity: 0;
+        /* 將對話框設為透明。 */
+        display: none;
+        /* 隱藏對話框。 */
+        width: 90%;
+        /* 對話框寬度。 */
+        background: white;
+        box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        line-height: 1.7em;
+    }
+
+    .title {
+        text-align: center;
+        padding: 8px;
+        font-size: 20px;
+        background: $brown;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+        border: 1px #f2e6e6 solid;
+        box-shadow: 0px 2px 8px 1px rgb(0 0 0 / 15%);
+    }
+
+    .content {
+        padding: 4px 8px;
+        color: $dark-brown;
+        text-align: center;
+    }
+
+    .buttons {
+        /* 加上這兩個CSS，可以讓button移動到對話框下方。 */
+        /*position: absolute;
+        right: 0px;
+        */
+        text-align: right;
+        padding: 8px 14px;
+    }
+
+    .okBtn {
+        display: inline-block;
+        background: #092b68b3;
+        color: #ffffffeb;
+        border-radius: 8px;
+        border: 1px solid white;
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+
+}
