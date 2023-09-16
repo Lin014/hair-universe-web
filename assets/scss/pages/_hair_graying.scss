@@ -1,0 +1,126 @@
+.section1 {
+    background-color: #ebe8df;
+
+    .container {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    h1 {
+
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 120px;
+
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 20px;
+            margin-bottom: 100px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+
+        @include media-breakpoint-down(lg) {
+            height: 320px;
+
+        }
+
+        @include media-breakpoint-down(md) {
+            height: 200px;
+        }
+    }
+}
+
+.section2 {
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid $apricot;
+
+        @include media-breakpoint-down(lg) {}
+
+        @include media-breakpoint-down(md) {}
+    }
+
+    h5 {
+        background-color: $apricot;
+        border: 2px solid $apricot;
+        text-align: center !important;
+        margin-top: 12px;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 16px;
+
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+.section3 {
+    background-color: $dark-pink;
+    height: auto;
+
+    .item1 {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            max-width: 100%;
+            width: 280px;
+            height: 210px;
+            border: 5px solid white;
+            margin-bottom: 32px;
+        }
+
+    }
+
+    @media (max-width:768px) {
+
+        .item1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 400px;
+            height: 360px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+}
+
+.section4 {
+
+    ol,
+    ul {
+        padding-left: 0 !important;
+    }
+
+    li b {
+        font-size: 20px;
+    }
+}
+
+.info {
+    font-size: 12px;
+    margin: 0 auto !important;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 10px;
+
+    }
+}

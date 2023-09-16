@@ -1,0 +1,75 @@
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.haircare-section1 {
+    background-image: url('../images/2/background-starsky 1.png');
+    background-size: cover;
+
+    a {
+        text-decoration: none;
+
+        &:hover {
+            filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.5));
+        }
+    }
+
+    .line {
+        width: 15%;
+    }
+
+    .haircare-image {
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .haircare-image2 {
+        max-height: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+}
+
+.haircare-animation {
+    position: absolute;
+    z-index: 2;
+    transition: transform 1s;
+
+    @media (max-width: 1800px) {
+        display: none;
+    }
+}
+
+.haircare-animation-1 {
+    top: 242px;
+    left: 250px;   
+}
+
+.haircare-animation-2 {
+    top: 690px;
+    left: 620px;   
+}
+
+.haircare-animation-float {
+    width: 40%;
+    animation: floatAnimation 2s ease-in-out infinite;
+}
+
+.haircare-block {
+    height: 56px;
+    background-image: url('../images/2/Rectangle 182.png');
+
+    display: flex;
+    align-items: center;
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: #999 !important;
+    }
+}
+

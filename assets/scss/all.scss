@@ -1,10 +1,10 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
 @import "../../node_modules/bootstrap/scss/mixins";
+@import './utils/base';
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
-
 
 @import './pages/index.scss';
 @import './pages/scalp_cleansing.scss';
@@ -14,5 +14,19 @@
 @import './pages/_hair_loss.scss';
 @import './pages/_dandruff.scss';
 @import './pages/_scalp_care.scss';
+@import './pages/hair_faq.scss';
+@import './pages/recommendation.scss';
+@import './pages/hairpedia';
+@import './pages/hair_care';
+@import './pages/shampoo_intro';
+@import './pages/guide';
+@import './pages/hair_care_clinic.scss';
+@import './pages/hair_graying.scss';
+@import './pages/oily_scalp.scss';
+@import './pages/split_ends.scss';
+@import './pages/frazzled_hair.scss';
+@import './pages/scalp_types';
+@import './pages/hair_structure';
+@import './pages/scalp_pustules';
 
 @import "../../node_modules/bootstrap";

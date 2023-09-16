@@ -6,9 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>頭髮危機小宇宙</title>
+	<link rel="icon" href="/assets/images/LOGO.png" type="image/x-icon">
 </head>
 
 <body>
+
+	<%- include('./layout/header'); -%>
 
 	<div class="container text-center mb-64 p-0 mt-3">
 		<nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -52,6 +55,8 @@
 			</li>
 		</ul>
 	</div>
+
+	<%- include('./layout/footer'); -%>
 
 	<script type="module" src="../main.js"></script>
 </body>

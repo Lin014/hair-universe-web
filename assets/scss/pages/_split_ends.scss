@@ -1,0 +1,51 @@
+.section3-6-2 {
+    .section3-6-2-itemsz {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .img {
+        margin: 40px;
+        width: 240px;
+        height: 240px;
+    }
+
+    h5 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    @media (max-width:768px) {
+
+        .img {
+            margin: 10px auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+}
+
+.section3-6-4 {
+    ul li {
+        list-style: disc;
+    }
+}
+
+.button {
+    border: 0;
+    background-color: $dark-green;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #8C9086;
+}
+
+.button:hover {
+    color: $dark-green;
+    background-color: #fff;
+}

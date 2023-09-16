@@ -6,9 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>頭髮危機小宇宙</title>
+  <link rel="icon" href="/assets/images/LOGO.png" type="image/x-icon">
 </head>
 
 <body>
+
+  <%- include('./layout/header'); -%>
 
   <div class="index-section1 mb-100">
     <div class="container">
@@ -80,6 +83,7 @@
     </div>
   </div>
 
+
   <div class="index-section5 container mb-100 text-center">
     <h2 class="text-secondary fw-bold mb-36">洗髮精選擇</h2>
 
@@ -98,7 +102,7 @@
       <div class="tab-pane fade show active bg-apricot py-64" id="pills-scalp" role="tabpanel"
         aria-labelledby="pills-scalp-tab">
         <div class="shampoo-cards bg-scalp">
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="油性">
             <div>
               <h3 class="mb-1">油性頭皮</h3>
             <span class="d-block">Oily Scalp</span>
@@ -107,7 +111,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="中性">
             <div>
               <h3 class="mb-1">中性頭皮</h3>
               <span class="d-block ">Normal Scalp</span>
@@ -116,7 +120,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="乾性">
             <div>
               <h3 class="mb-1">乾性頭皮</h3>
               <span class="d-block ">Dry Scalp</span>
@@ -131,7 +135,7 @@
 
       <div class="tab-pane fade bg-apricot py-64" id="pills-need" role="tabpanel" aria-labelledby="pills-need-tab">
         <div class="shampoo-cards bg-need">
-          <a href="recommendation.html" class="shampoo-card p-3 text-start mb-xl-0 mb-4">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start mb-xl-0 mb-4" data-param="控油清爽">
             <div>
               <h3 class="mb-1">控油清爽</h3>
               <span class="d-block">Oil-control<br>& Fresh</span>
@@ -140,7 +144,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="抗屑止癢">
             <div>
               <h3 class="mb-1">抗屑止癢</h3>
               <span class="d-block">Anti-dandruff<br>& Anti-itching</span>
@@ -149,7 +153,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="染燙修護">
             <div>
               <h3 class="mb-1">染燙修護</h3>
               <span class="d-block">Dyeing<br>& Scalding</span>
@@ -158,7 +162,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="保濕柔順">
             <div>
               <h3 class="mb-1">保濕柔順</h3>
               <span class="d-block">Moisturizing<br>& Smoothing</span>
@@ -167,7 +171,7 @@
               <img src="../assets/images/1/shampoo.png" alt="洗髮精瓶子" class="shampoo">
             </div>
           </a>
-          <a href="recommendation.html" class="shampoo-card p-3 text-start">
+          <a href="recommendation.html" class="shampoo-card p-3 text-start" data-param="強健豐盈">
             <div>
               <h3 class="mb-1">強健豐盈</h3>
               <span class="d-block">Strength<br>& abundance</span>
@@ -181,7 +185,9 @@
     </div>
   </div>
 
+  <%- include('./layout/footer'); -%>
 
+  <script type="module" src="../assets/js/pages/index.js"></script>
   <script type="module" src="../main.js"></script>
 </body>
 

@@ -1,0 +1,110 @@
+.scalppustules-section1 {
+  .section1-img {
+    width: 400px;
+  }
+}
+
+.scalppustules-section2 {
+  .reason-card {
+    width: calc(16% - 16px);
+
+    @include media-breakpoint-down(lg) {
+      width: calc(33% - 16px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: calc(50% - 16px);
+    }
+  }
+
+  .reason-card-img {
+    border: 5px solid #f5f2f1;
+  }
+}
+
+.scalppustules-section3 {
+  .section3-img {
+    width: 150px;
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+    }
+  }
+
+  .section3-arrow-img {
+    width: 50px;
+
+    @include media-breakpoint-down(md) {
+      transform: rotate(90deg);
+    }
+  }
+
+  .section3-card {
+    width: 30%;
+    border-radius: 20px;
+
+    @include media-breakpoint-down(xl) {
+      width: 40%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 80%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      .section3-img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.scalppustules-section4 {
+  .section4-img {
+    width: 400px;
+  }
+}
+
+.scalppustules-section5 {
+  .section5-img {
+    width: 200px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}
+
+.scalppustules-section6 {
+  .section6-img {
+    width: 150px;
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+    }
+  }
+
+  .section6-arrow-img {
+    width: 50px;
+
+    @include media-breakpoint-down(md) {
+      transform: rotate(90deg);
+    }
+  }
+
+  .rounded-top-3 {
+    border-radius: 3rem 3rem 0px 0px;
+  }
+
+  .rounded-bottom-3 {
+    border-radius: 0 0 3rem 3rem;
+  }
+
+  .remind-card {
+    width: 200px;
+    height: 200px;
+    background-image: url("../images/3-3/section7.png");
+    background-size: cover;
+    background-position: center;
+  }
+}

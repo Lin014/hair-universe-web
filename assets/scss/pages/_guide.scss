@@ -1,0 +1,38 @@
+.text-dark-brown {
+    color: $dark-brown;
+}
+
+.img {
+    max-width: 100%;
+    width: 25%;
+    height: auto;
+    display: block;
+    -moz-border-radius-bottomright: 50px 50px;
+    border-bottom-right-radius: 50px 50px;
+    -moz-border-radius-topleft: 50px 50px;
+    border-top-left-radius: 50px 50px;
+}
+
+@media (max-width: 992px) {
+    .img {
+        width: 70%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+.custom-content {
+    margin-left: $spacer *3.5;
+    text-indent: 2em;
+}
+
+@media (max-width:768px) {
+    .custom-content {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
