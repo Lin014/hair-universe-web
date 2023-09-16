@@ -23,6 +23,7 @@
                 </nav>
             </div>
             <h1 class="text-left">選擇篩選條件，馬上尋找適合您的診所！</h1>
+
             <div class="d-flex">
                 <div>
                     <h4>地區</h4>
@@ -48,7 +49,10 @@
                     </select>
                 </div>
             </div>
-            <div id="map" class="map mt-36 mb-100"></div>
+            <div>
+                <h5 class="text-center mt-3 mb-3">請先選取地區及診所類型，完成篩選後請點擊地圖上紅色標記查看診所資訊</h5>
+            </div>
+            <div id="map" class="map mt-2 mb-100"></div>
         </div>
         <div class="dialog_modal">
             <div class="dialog">
@@ -74,19 +78,19 @@
                 let markers = [];
                 let infoWindow;
                 const beaches = [
-                    ["DCDC生髮診所總院", 25.0422681, 121.5424544, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/5", "台北市大安區大安路一段75巷21號2樓"],
-                    ["DCDC生髮診所竹北院區", 24.8153831, 121.0217587, "植髮診所", "新竹縣", "https://dcdchair.com.tw/clinics/6", "新竹縣竹北市自強南路182號3樓"],
-                    ["DCDC生髮診所高雄院區", 22.6610928, 120.3075843, "植髮診所", "高雄市", "https://dcdchair.com.tw/clinics/7", "高雄市左營區明誠二路180號2樓"],
-                    ["DCDC生髮診所台北旗艦店", 25.0425358, 121.5452807, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/8", "台北市大安區敦化南路一段190巷12號"],
-                    ["DCDC生髮診所台中院區", 24.157512, 120.6470562, "植髮診所", "台中市", "https://dcdchair.com.tw/clinics/11", "台中市西屯區文心路二段566之1號3樓之2"],
-                    ["ihair 風華御髮台北古亭店", 25.0278009, 121.522166, "美學診所", "台北市", "https://www.ihairtransplantclinic.com/taipei/ihair-taipei", " 台北市大安區羅斯福路二段33號4樓"],
-                    ["ihair 風華御髮桃園中正店", 24.9965827, 121.3093853, "美學診所", "桃園市", "https://www.ihairtransplantclinic.com/taoyuan/ihair-taoyuan", " 桃園市桃園區中正路271號3樓"],
-                    ["ihair 風華御髮新竹竹北高鐵店", 24.8071615, 121.0370423, "美學診所", "新竹縣", "https://www.ihairtransplantclinic.com/hsinchu/ihair-hsinchu", "新竹縣竹北市高鐵二路38號一樓"],
-                    ["ihair 風華御髮台中新國店", 24.1568519, 120.6464849, "美學診所", "台中市", "https://www.ihairtransplantclinic.com/taichung/ihair-taichung", "台中市西屯區市政北一路1號1樓 1-D2"],
-                    ["ihair 風華御髮台南崇明店", 22.9750387, 120.2226316, "美學診所", "台南市", "https://www.ihairtransplantclinic.com/tainan/ihair-tainan", "台南市東區崇明路377-1號2樓"],
-                    ["ihair 風華御髮高雄巨蛋店", 22.6647775, 120.3004661, "美學診所", "高雄市", "https://www.ihairtransplantclinic.com/kaohsiung/", "高雄市鼓山區文信路234號2樓"],
-                    ["勻禾妍美學健康診所", 22.6856517, 120.3071755, "美學診所", "高雄市", "https://www.icarebeauty.com.tw/", "高雄市左營區文學路25號"],
-                    ["H&H 醫髮診所", 25.04589, 121.5410691, "頭髮護理診所", "台北市", "https://www.2h.com.tw/", "台北市中山區復興南路一段36-9號9F"],
+                    ["DCDC生髮診所總院", 25.0422681, 121.5424544, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/5", "台北市大安區大安路一段75巷21號2樓", "0800-580-968、02-2778-7000", "週一至週六 上午10:00 - 下午20:00"],
+                    ["DCDC生髮診所竹北院區", 24.8153831, 121.0217587, "植髮診所", "新竹縣", "https://dcdchair.com.tw/clinics/6", "新竹縣竹北市自強南路182號3樓", "0800-550-968、03-668-8880", "週一至週六 上午10:00 - 下午20:00"],
+                    ["DCDC生髮診所高雄院區", 22.6610928, 120.3075843, "植髮診所", "高雄市", "https://dcdchair.com.tw/clinics/7", "高雄市左營區明誠二路180號2樓", "0800-885-968、07-556-6699", "週一至週六 上午10:00 - 下午20:00 "],
+                    ["DCDC生髮診所台北旗艦店", 25.0425358, 121.5452807, "植髮診所", "台北市", "https://dcdchair.com.tw/clinics/8", "台北市大安區敦化南路一段190巷12號", "0800-580-968、02-2778-1000", "週一至週六 上午10:00 - 下午20:00"],
+                    ["DCDC生髮診所台中院區", 24.157512, 120.6470562, "植髮診所", "台中市", "https://dcdchair.com.tw/clinics/11", "台中市西屯區文心路二段566之1號3樓之2", "0800-520-968、04-2329-1000", "週一至週六 上午10:00 - 下午20:00"],
+                    ["ihair 風華御髮台北古亭店", 25.0278009, 121.522166, "美學診所", "台北市", "https://www.ihairtransplantclinic.com/taipei/ihair-taipei", " 台北市大安區羅斯福路二段33號4樓", " 0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["ihair 風華御髮桃園中正店", 24.9965827, 121.3093853, "美學診所", "桃園市", "https://www.ihairtransplantclinic.com/taoyuan/ihair-taoyuan", " 桃園市桃園區中正路271號3樓", " 0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["ihair 風華御髮新竹竹北高鐵店", 24.8071615, 121.0370423, "美學診所", "新竹縣", "https://www.ihairtransplantclinic.com/hsinchu/ihair-hsinchu", "新竹縣竹北市高鐵二路38號一樓", "0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["ihair 風華御髮台中新國店", 24.1568519, 120.6464849, "美學診所", "台中市", "https://www.ihairtransplantclinic.com/taichung/ihair-taichung", "台中市西屯區市政北一路1號1樓 1-D2", "0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["ihair 風華御髮台南崇明店", 22.9750387, 120.2226316, "美學診所", "台南市", "https://www.ihairtransplantclinic.com/tainan/ihair-tainan", "台南市東區崇明路377-1號2樓", "0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["ihair 風華御髮高雄巨蛋店", 22.6647775, 120.3004661, "美學診所", "高雄市", "https://www.ihairtransplantclinic.com/kaohsiung/", "高雄市鼓山區文信路234號2樓", "0800-777-155", "週一至週五10:00-20:00；週六10:00-18:00"],
+                    ["勻禾妍美學健康診所", 22.6856517, 120.3071755, "美學診所", "高雄市", "https://www.icarebeauty.com.tw/", "高雄市左營區文學路25號", "07-3431666", "週一至週五09:00-21:00；週六09:00-17:30"],
+                    ["H&H 醫髮診所", 25.04589, 121.5410691, "頭髮護理診所", "台北市", "https://www.2h.com.tw/", "台北市中山區復興南路一段36-9號9F", "08-0077-0111", "週一至週五09:00-21:00；週六09:00-17:30"],
 
                 ];
                 function initMap() {
@@ -126,7 +130,6 @@
                         zoom: 16,
                     });
                     const infoWindow = new google.maps.InfoWindow();
-
                     setMarkers(beaches);
                 }
 
@@ -151,19 +154,20 @@
                         const clinicCity = clinic[4];
                         const clinicOfficalWebsite = clinic[5];
                         const clinicAddress = clinic[6];
+                        const clinicPhone = clinic[7]
+                        const clinicTime = clinic[8]
                         const contentString = `
                             <div>
-                                <h2>${clinicName}</h2>
-                                <p>診所類型: ${clinicType}</p>
-                                <p>所在地區: ${clinicCity}</p>
-                                <p>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></p>
-                                <p>地址: ${clinicAddress}</p>
+                                <h3>${clinicName}</h3>
+                                <h5>診所電話: ${clinicPhone}</h5>
+                                <h5>營業時間: ${clinicTime}</h5>
+                                <h5>診所地址: ${clinicAddress}</h5>
+                                <h5>官方網站: <a href="${clinicOfficalWebsite}" target="_blank">${clinicOfficalWebsite}</a></h5>
+                                
                             </div>
                         `;
-
                         infoWindow.setContent(contentString);
                         infoWindow.open(map); // 使用事件對象的目標作為參數
-
                         const infowindow = new google.maps.InfoWindow({
                             content: contentString
                         });
@@ -172,9 +176,12 @@
                                 anchor: marker,
                                 map,
                             });
-                            displayClinicInfo(clinin);
                         });
                         markers.push(marker);
+                        infoWindow.addListener('closeclick', () => {
+                            close();
+                            initMap();
+                        });
                     }
                 }
 
@@ -196,6 +203,7 @@
                     select2Clicked = true;
                 });
                 function updateMapMarkers() {
+
                     const selectedCity = cityDropdown.value;
                     const selectedClinicType = clinicTypeDropdown.value;
                     const filteredClinics = beaches.filter(clinic => {
@@ -237,6 +245,9 @@
                             // 此區塊為callback function，會在動畫結束時被呼叫。
                             $(".modal").css("display", "none"); // 隱藏modal。
                             $(".dialog").css("display", "none"); // 隱藏dialog。
+                            // 重置選擇狀態
+                            select1Clicked = false;
+                            select2Clicked = false;
                         });
                     });
                 }
