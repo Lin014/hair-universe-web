@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>頭髮危機小宇宙</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+	<div class="container">
+    <div>
+      <nav class="mb-4 pt-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+              <li class="breadcrumb-item"><a href="hair_care.html">頭髮養護</a></li>
+              <li class="breadcrumb-item active text-secondary" aria-current="page">營養健康</li>
+          </ol>
+      </nav>
+    </div>
+	</div>
+
+  <div class="nutrition-section1 mb-100 ">
+        <div class="container pt-md-36 pb-md-36 pt-3 pb-3">
+          <div class="text-center d-flex justify-content-center ">
+            
+            <img class="image me-0 mb-3 me-md-64 mb-md-0" src="../assets/images/4-1/section4-1-0.png"
+                    alt="">
+            <h2 class="text-start text-secondary  fw-bold mb-3">預防掉髮方式: <br>營養篇</h2>
+          </div>
+        </div>
+  </div>
+
+  <div class="container">
+      <div class="mt-100">
+          <h2>頭髮營養學</h2>
+          <h3>1.攝取足夠蛋白質</h3>
+          <p>頭髮最重要的成分就是「胺基酸」！需要補足豐富的蛋白質才能讓毛囊有足夠的原料長頭髮</p>
+          <h3>2.攝取足夠維生素c</h3>
+          <p>頭髮含有大量的膠原蛋白，維生素C除了能調節免疫力之外，也能幫助增生膠原蛋白，預防頭法乾澀及斷裂。建議多補充多樣化的蔬果</p>
+          <h3>3.攝取鐵質</h3>
+          <p>當人體缺鐵，體內的紅血球合成受阻，血液帶氧量不足，頭髮無法獲得足夠的營養就容易增加掉髮現象。</p>
+      </div>
+  </div>
+
+  <div class="container nutrition-section2 mt-100 mb-40">
+    <h2>預防掉髮食物</h2>
+    <div class="nutrition-section2-itemsz">
+        <div>
+            <img class="img" src="/assets/images/4-1/section4-1-0.png" alt="">
+            <h5>雞蛋</h5>
+        </div>
+
+        <div>
+            <img class="img" src="/assets/images/4-1/section4-1-2.png" alt="">
+            <h5>菠菜</h5>
+        </div>
+        <div>
+            <img class="img" src="/assets/images/4-1/section4-1-3.png" alt="">
+            <h5>鮭魚</h5>
+        </div>
+        <div>
+            <img class="img" src="/assets/images/4-1/section4-1-4.png" alt="">
+            <h5>甜椒</h5>
+        </div>
+        <div>
+            <img class="img" src="/assets/images/4-1/section4-1-5.png" alt="">
+            <h5>牡蠣</h5>
+        </div>
+    </div>
+  </div>
+
+    <div class="nutrition-section4 container mb-100 mt-100">
+        <div class="pt-md-36 pb-md-36 pt-3 pb-3">
+            <h2 class="text-start fw-bold mb-3">營養師衛教:</h2>
+            <div class ="uvideo">
+                <iframe width="800" height="200" src="https://www.youtube.com/embed/GVfkGlUYDlU?si=ErEP4YIcuUj--5ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>    
+        </div>
+    </div>
+    <div class="container mb-100 d-flex justify-content-end"><input class="button" type="button" value="返回列表"
+      name="返回" onclick="location.href='hair_care.html'">
+    </div>
+    <%- include('./layout/footer'); -%>
+	<script type="module" src="../main.js"></script>
+</body>
+
+</html>
